@@ -1,0 +1,5 @@
+User-agent *
+Disallow: /crystal
+Disallow: /Orion
+Disallow: /hm
+Disallow: /blender

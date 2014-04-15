@@ -1,0 +1,133 @@
+<HTML>
+<HEAD><TITLE>Welcome to VCT Labs</TITLE>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#00008F" LINK="#00008F">
+<TABLE BORDER="0" CELLPADDING="10" CELLSPACING="0">
+<TR>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" ALIGN="left" VALIGN="top" ROWSPAN="2"><IMG SRC="/images/vctlogo.gif"></TD>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" COLSPAN="4" ALIGN="center" VALIGN="top"><FONT COLOR="white" SIZE="6">Vanguard Computer Technology Labs</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" HEIGHT="20" ALIGN="center" VALIGN="bottom"><A HREF="/1_consulting/index.html"><IMG SRC="/images/Consulting.gif" BORDER="0" ALT="Consulting"></A></TD>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" HEIGHT="20" ALIGN="center" VALIGN="bottom"><A HREF="/2_filterwall/index.html"><IMG SRC="/images/FilterWall.gif" BORDER="0" ALT="FilterWall"></A></TD>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" HEIGHT="20" ALIGN="center" VALIGN="bottom"><A HREF="/3_powerpc/index.html"><IMG SRC="/images/PowerPC_hi.gif" BORDER="0" ALT="PowerPC"></A></TD>
+<TD BGCOLOR="#4444DD" BACKGROUND="/images/topbanner_back.gif" HEIGHT="20" ALIGN="center" VALIGN="bottom"><A HREF="/4_contacts/index.html"><IMG SRC="/images/Contacts.gif" BORDER="0" ALT="Contacts"></A></TD>
+</TR>
+<TR><TD BGCOLOR="#5588DD" BACKGROUND="/images/blueback.gif" VALIGN="top">
+<IMG SRC="/images/v_space.gif"<BR>
+</TD>
+<TD BGCOLOR="#FFFFFF" WIDTH="620" HEIGHT="400" COLSPAN="4" VALIGN="top">
+&nbsp;
+<P>
+<center>
+<font size="+2" color="#003399"><B>Power PC Software Development</B></font>
+</center>
+<P>
+<TABLE BORDER="0">
+<TR>
+<TD VALIGN="top" ALIGN="left" WIDTH="100"><IMG SRC="xp860t_small.gif"></TD>
+<TD WIDTH="400">
+<BR>
+[11/08/04]
+<BR>
+Current diagnostics version: <A HREF="#latest">1.1.1</A>
+<BR><BR>
+We have released diagnostics source code for a
+<A HREF="http://www.jrmconsultants.com">custom board</A>
+based on the Motorola PowerPC
+860T.  The diagnostics currently test memory, LEDs, NAND flash, NVRAM, Dallas
+and PPC RTCs, ethernets connected to SCC1 and the 860T's Fast Ethernet
+Controller.  NEW: Version 1.1.1 now supports PCI, Cardbus, and SCSI.
+<BR>These diagnostics are written so as to be portable to other custom
+designs based on the 855T/860T, and possibly portable to other embedded Power
+PC processors.
+<BR>
+The diagnostics borrow driver code from PPCBoot, and therefore are
+<A HREF="http://www.gnu.org/copyleft/gpl.html">GPL'd</A>
+.  In other words, the source is provided for
+free, and in exchange, we would like those who find the source useful to
+<A HREF="mailto:rchilds@vctlabs.com">send us</A>
+their software changes that may be relevant to the MPC 855/860T.
+<BR>
+These diagnostics require the boot firmware to initialize the MPC and
+CPM on the 860T beforehand.  Only peripherals will be diagnosed, but if you'd
+like to add processor diagnostics to this package,
+<A HREF="mailto:rchilds@vctlabs.com"> feel free</A>..  And while you're
+at it, release them under the GPL, too.
+<BR>
+Please send any patches, comments, suggestions, etc. regarding these
+diagnostics to: 
+<A HREF="mailto:rchilds@vctlabs.com">rchilds@vctlabs.com</A>.
+<BR><BR>
+Update: 11/08/04<BR>
+<BR>
+<A NAME="latest">
+Notable changes in version 1.1.1:
+</A>
+<BR>
+<UL>
+<LI>Support for PCI bridge (PLX9054)</LI>
+<LI>Support for Cardbus bridge (TI PCI1410A)</LI>
+<LI>Support for SCSI controller (LSI 53C810A)</LI>
+</UL>
+See the <A HREF="CHANGELOG-1.1.1">CHANGELOG for version 1.1.1</A> for more details.
+<BR>
+<A HREF="README-1.1.1">View the README for ppc_diag-1.1.1.</A>
+<BR>
+<A HREF="ppc_diag-1.1.1.tgz">Download version 1.1.1 of ppc_diag.</A>
+<BR><BR>
+
+Notable changes in version 1.0.4:
+<BR>
+<UL>
+<LI>New support now added for NAND flash block testing.
+</LI>
+<LI>new support for serial consoles on other than SMC1 is available - which
+includes SMC1, SMC2, SCC1, SCC2, SCC3, SCC4.
+</LI>
+<LI>Finally, the CPU speed calculation code has been fixed - it used to depend
+on a value stored in DPRAM by PPCBOOT.  Now the value calculated when the
+diagnostics start up is used instead (can be overriden by setting
+CPU_CLOCK_RATE in config.h).  This should hopefully allow the diagnostics to
+start up properly when run from a hardware debugger (such as the
+<A HREF="http://www.abatron.ch/BDI/bdihw.html">BDI 2000</A> from
+<A HREF="http://www.abatron.ch">Abatron</A>).
+</LI>
+</UL>
+<BR><BR>
+<A HREF="README-1.0.4">View the README for ppc_diag-1.0.4.</A>
+<BR>
+<A HREF="CHANGELOG-1.0.4">View the CHANGELOG for ppc_diag-1.0.4.</A>
+<BR>
+<A HREF="ppc_diag-1.0.4.tgz">Download version 1.0.4 of ppc_diag.</A>
+<A HREF="patch_1.0.2_to_1.0.4">Download 1.0.2 -> 1.0.4 patch.</A>
+<BR>
+Patch instructions: Place the patch file in the ppc_diag directory.  Run the
+following command at the prompt:
+<BR>
+<PRE>
+patch -p1 &lt; {patch_file_name}
+</PRE>
+<BR><BR>
+<A HREF="README-1.0.2">View the README for ppc_diag-1.0.2.</A>
+<BR>
+<A HREF="CHANGELOG-1.0.2">View the CHANGELOG for ppc_diag-1.0.2.</A>
+<BR>
+<A HREF="ppc_diag-1.0.2.tgz">Download version 1.0.2 of ppc_diag.</A>
+ (link fixed)
+<BR><BR>
+<A HREF="README-1.0.1">View the README file for ppc_diag-1.0.1.</A>
+<BR>
+<A HREF="ppc_diag_1.0.1.tgz">Download version 1.0.1 of ppc_diag.</A>
+</TD>
+</TR>
+</TABLE>
+<P>
+
+<!--diagnostics
+powerpc
+mpc
+portable
+ppcboot-->
+</TR></TD></TABLE>
+<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=3 BGCOLOR="#F5F5F5"><TR><TD ALIGN="center"><HR>&copy; <A HREF="http://www.vctlabs.com">Vanguard Computer Technology Labs, inc.</A>, all rights reserved</TD></TR></TABLE>
+</BODY></HTML>
