@@ -1,11 +1,16 @@
-Vangaurd Computer Technology Labs, Inc.
-==================================================
+VCT Labs
+========
 
+:date: 2014-04-15 20:50
+:category: VCT
+:slug: index
+:summary: Short index page
 :url:
 :save_as: index.html
+:status: hidden
 
-Welcome to VCT Labs
--------------------
+Welcome to Vangaurd Computer Technology Labs, Inc.
+--------------------------------------------------
 
 VCT Labs is an Open Source Linux consulting shop with hardware, software, 
 and process expertise, as well as extensive experience in education and 
@@ -30,6 +35,8 @@ Next Steps
 ----------
 
 Learn more about VCT and how we can help:
+
+yada yada.  Example links:
 
 * `VCT news`_
 * `source code on GitHub`_

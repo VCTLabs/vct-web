@@ -18,12 +18,12 @@ TRANSLATION_FEED_ATOM = None
 # Blogroll
 LINKS =  (('Pelican', 'http://getpelican.com/'),
           ('Python.org', 'http://python.org/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),
-          ('You can modify those links in your config file', '#'),)
+          ('Jinja2', 'http://jinja.pocoo.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github: VCT', 'https://github.com/VCTLabs'),
+          ('github: Donald', 'https://github.com/dburr'),
+          ('github: Steve', 'https://github.com/sarnold'),)
 
 DEFAULT_PAGINATION = 5
 
