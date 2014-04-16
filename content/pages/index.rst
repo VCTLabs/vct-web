@@ -26,7 +26,7 @@ Some specific areas of expertise include:
 * Programming Languages: VHDL, Asm (ppc, x86), C, C++, Python, shell
 * New board bringup, BSP support, custom firmware, kernel/bootloader mods
 * Life-cycle and process support, system architecture definition
-* Development tools/SDKs, software lifecycle support (CM/CI, test, release)
+* Development tools/SDKs, process tools (CM/CI, test/verification, release)
 * Security/IA accreditation and system hardening support (PAX, SELinux, other)
 * System and software criticality and risk assessment, IV&V support
 * Open Source IT services, web applications, VPN solutions, etc
