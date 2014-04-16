@@ -1,5 +1,5 @@
-Contact Us
-##########
+Contact
+#######
 
 :date: 2014-04-15 20:50
 :category: VCT
