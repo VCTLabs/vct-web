@@ -1,6 +1,7 @@
 #Custom
 output
 pelicanconf_local.py
+*.pid
 
 #Python
 *.py[cod]
