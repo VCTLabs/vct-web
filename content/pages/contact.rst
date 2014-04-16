@@ -22,8 +22,8 @@ Address
 
 ::
 
- VCT Labs, Inc.
- 5951 Encina Rd. #107
+ Vangaurd Computer Technology Labs, Inc.
+ 5951 Encina Rd.  #107
  Goleta, CA 93117
 
 

@@ -49,7 +49,7 @@ Then cd into your fresh clone and clone the themes repo; we can trim it
 down later::
 
  $ cd vct-web
- $ git clone https://github.com/getpelican/pelican-themes themes
+ $ git clone --recursive https://github.com/getpelican/pelican-themes themes
 
 We'll probably want some plugins too, but for now just the themes repo.  The 
 layout of the source is fairly obvious::
