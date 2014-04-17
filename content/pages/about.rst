@@ -10,7 +10,7 @@ About
 About VCT Labs, Inc.
 --------------------
 
-Vangaurd Computer Technology Labs, Inc. is an Open Source Linux consulting 
+Vanguard Computer Technology Labs, Inc. is an Open Source Linux consulting 
 shop with hardware, software, and process expertise, as well as extensive 
 experience in education and training.  Staff highlights include several 
 with graduate degrees and active/former Gentoo Linux and OpenEmbedded 

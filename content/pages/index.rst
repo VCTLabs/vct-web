@@ -3,6 +3,7 @@
 :slug: index
 :status: hidden
 
+-------------------
 Welcome to VCT Labs
 -------------------
 
@@ -12,4 +13,3 @@ Welcome to VCT Labs
 
 .. include:: <isonum.txt>
 
-Copyright |copy| 2001-2014, Vanguard Computer Technology Labs, inc., all rights reserved

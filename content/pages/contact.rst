@@ -22,7 +22,7 @@ Address
 
 ::
 
- Vangaurd Computer Technology Labs, Inc.
+ Vanguard Computer Technology Labs, Inc.
  5951 Encina Rd.  #107
  Goleta, CA 93117
 
