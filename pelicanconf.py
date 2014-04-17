@@ -16,14 +16,15 @@ DEFAULT_LANG = u'en'
 #TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
+LINKS =  (('Yocto Project', 'https://www.yoctoproject.org/'),
+          ('OE Wiki', 'http://www.openembedded.org/wiki/Main_Page'),
           ('Python.org', 'http://python.org/'),
+          ('Pelican', 'http://getpelican.com/'),
           ('Jinja2', 'http://jinja.pocoo.org/'),)
 
 # Social widget
-SOCIAL = (('github: VCT', 'https://github.com/VCTLabs'),
-          ('github: Donald', 'https://github.com/dburr'),
-          ('github: Steve', 'https://github.com/sarnold'),)
+#SOCIAL = (('github: Donald', 'https://github.com/dburr'),
+#          ('github: Steve', 'https://github.com/sarnold'),)
 
 DEFAULT_PAGINATION = 5
 
@@ -41,13 +42,16 @@ SITELOGO = 'images/logo.png'
 CC_LICENSE_DERIVATIVES = "ShareAlike"
 CC_LICENSE_COMMERCIAL = "No"
 
+# Tell Pelican to add 'powerpc' to the output dir
+STATIC_PATHS = ['images', 'powerpc']
+
 GITHUB_USER = 'VCTLabs'
 GITHUB_SHOW_USER_LINK = True
-GITHUB_REPO_COUNT = "5"
+GITHUB_REPO_COUNT = "2"
 
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
-DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 #RECENT_POST_COUNT
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'

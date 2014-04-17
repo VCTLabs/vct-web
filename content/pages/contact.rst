@@ -1,11 +1,13 @@
+=======
 Contact
-#######
+=======
 
 :date: 2014-04-15 20:50
 :category: VCT
 :slug: contact
 :summary: Short contact page
 :save_as: pages/contact.html
+
 
 VCT Contact Information
 -----------------------

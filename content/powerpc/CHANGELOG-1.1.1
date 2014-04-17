@@ -1,0 +1,105 @@
+Version 1.1.1
+
+o Documentation updated
+
+o Various small changes
+
+o CPM I2C transmit capability added (not documented yet)
+
+Version 1.1.0
+
+Four major additions to this latest release, which should explain the long
+silence since the last release..
+
+o Added PLX 9054 support for accessing a PCI bus from the 86X processor.
+  Current tests:
+   - PCI device discovery (bus 0 only; i.e. no PCI -> PCI bridge support)
+   - Read/write PCI registers on a given IDSEL
+   - Read/set registers on the PLX 9054
+
+o Added LSI 53C810A PCI SCSI adapter support.
+  Current tests:
+   - SCSI reset
+   - Script test (runs simple SCSI script & verifies operation)
+   - Inquiry test (For now, only on SCSI ID 2)
+   - Request sense test (ID 2)
+   - Read/write block (16-byte) commands to SCSI disk devices (again, only ID 2)
+   - Test LSI53C810A PCI config regs, and internal regs.
+
+o Added TI 1410A PCI Cardbus adapter support.
+  Current tests:
+   - Read/write TI 1410A Config registers
+   - Read/write cardbus registers
+   - Read/write EXCA (PCMCIA compatibility) registers
+   - Test SRAM PCMCIA card attached to cardbus socket (our card lacks attribute
+     memory, unfortunately, so there's no code to support that at this time).
+
+o Wrote first cut of sysbus sniffer diagnostics.
+
+o Fixed var args compile bug with 3.2 gcc.  Was using stdargs.h copied from a
+  particular gcc, now using the system default.
+
+o New make target "html" to create web pages in the html/ directory with
+  hyperlinked syntax-highlighted source code.  Should only be run after the
+  syntax has been verified.  Requires the source-highlight program to be
+  installed on the build system.
+
+Version 1.0.4
+
+o Implemented general serial console support controlled by config defines
+  SERIAL_SMC = {1,2} or SERIAL_SCC = {1,2,3,4} to handle console on
+  SMC1, SMC2, SCC1, SCC2, SCC3, or SCC4 (tested with console on SMC1 and SCC1)
+
+o Allow an upper limit of memory size to be supplied to memory calculation 
+  code, instead of defaulting to the constant 512MB
+
+o Fixed problem with timing loops when running without ppcboot
+
+o Added NAND flash tests
+
+o Added Red Box tests
+
+Version 1.0.3
+
+o Moved the gendiags.sh variables into the Makefile to make them easy to
+  override if necessary.
+
+Version 1.0.2
+
+o Added instruction cache support.  The instruction cache is disabled at
+  startup, and re-enabled at the end of power-up testing if it was enabled when
+  the diagnostics started.  Its contents are not restored, so beware if any
+  icache locking mechanism is in use before starting the diagnostics.  The
+  instruction cache is also enabled by default during the memory tests.  To use
+  it, #define ENABLE_ICACHE_SUPPORT in config.h.  #undef this constant, and the
+  instruction cache won't be touched at all during the diagnostics (not even at
+  the start & finish).
+
+o Added #ifdef ENABLE_PPC_IDMA0_SUPPORT conditional around DMATest case in
+  memory/mem_err.c: this file wouldn't compile if the constant wasn't defined.
+
+o Added #ifdef ENABLE_GREEN_BOX_SUPPORT conditional around the run-time menu
+  alterations section in display_main_menu(), since this section wouldn't
+  compile if the constant wasn't defined.
+
+o Added new "Quick Test" memory test which can test about .75 MB/s on the 50MHz
+  MPC860T.  It flashes an LED instead of printing to the console; see config.h
+  for setting up the quick memory test LED at compile time.
+
+o Fixed the module.mak section dealing with assembly source files in a .list.
+  The `make depend' process should now properly create .depend entries for
+  assembly sources.
+
+o The LED test, quick memory test, and burn-in testing should now pay attention
+  to the settings in config.h.  Check config.h for the new LED constants -
+  there should be a number beside both QUICK_MEM_LED and BURN_IN_OK_LED.  LED 0
+  would be the 0th bit in the LED register.  If you don't care about LED
+  functionality, set LED_BASE_ADDR to some untouched memory location.
+
+o Fixed up pkt_stat() a bit, so it will print only 2 decimal places, but more
+  accurately.
+
+Version 1.0.1
+
+o First publicly available version
+
