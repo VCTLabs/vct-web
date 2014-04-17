@@ -29,8 +29,6 @@ Some specific areas of expertise include:
 * System and software criticality and risk assessment, IV&V support
 * Open Source IT services, web applications, VPN solutions, etc
 
-... and many more.
-
 Next Steps
 ----------
 
