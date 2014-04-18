@@ -3,13 +3,17 @@
 :slug: index
 :status: hidden
 
--------------------
-Welcome to VCT Labs
--------------------
+.. include:: <isonum.txt>
+
+.. role:: raw-html(raw)
+   :format: html
+
+:raw-html:`<center><H2>Vanguard Computer Technology Labs</H2></center>`
+:raw-html:`<br />`
 
 .. image:: images/sb.jpg
    :alt: Santa Barbara Snow
    :align: center
 
-.. include:: <isonum.txt>
+:raw-html:`<center><H3>Welcome to VCT Labs</H3></center>`
 

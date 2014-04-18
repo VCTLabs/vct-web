@@ -12,6 +12,7 @@ See the following upstream URLs for documentation and source:
 * http://docs.getpelican.com/en/3.3.0/getting_started.html
 * https://gist.github.com/josefjezek/6053301  (secondary)
 * https://github.com/getpelican/pelican-themes
+* https://github.com/DandyDev/pelican-bootstrap3  (current theme)
 * https://github.com/getpelican/pelican-blog
 * https://github.com/VCTLabs/vct-web
 
@@ -68,10 +69,14 @@ document root.
 The old_content folder contains everything that was reachable via wget in the 
 current VCT web site.
 
+The current theme that I like so far is pelican-bootstrap3 - see the theme 
+readme file from DandyDev above for config options, features, etc (also the 
+primary pelican docs).
+
 ReStructuredText references
 ---------------------------
 
 * http://docutils.sourceforge.net/docs/user/rst/quickref.html
 * http://docutils.sourceforge.net/rst.html
-
+* http://docutils.sourceforge.net/docs/ref/rst/roles.html
 

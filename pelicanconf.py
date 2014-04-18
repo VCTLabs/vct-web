@@ -4,7 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = u'VCT Labs'
 SITENAME = u'VCT Labs'
+HIDE_SITENAME = True
 SITEURL = 'http://www.vctlabs.com'
+SITELOGO = 'images/logo.png'
+SITELOGO_SIZE = '60'
 
 TIMEZONE = 'PST8PDT'
 
@@ -16,11 +19,13 @@ DEFAULT_LANG = u'en'
 #TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Yocto Project', 'https://www.yoctoproject.org/'),
-          ('OE Wiki', 'http://www.openembedded.org/wiki/Main_Page'),
+LINKS =  (('Gentoo Linux', 'http://www.gentoo.org'),
+          ('Yocto Project', 'https://www.yoctoproject.org/'),
+          ('SELinux', 'http://selinuxproject.org/page/Main_Page'),
           ('Python.org', 'http://python.org/'),
           ('Pelican', 'http://getpelican.com/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),)
+          ('Jinja2', 'http://jinja.pocoo.org/'),
+          ('reStructuredText', 'http://docutils.sourceforge.net/rst.html'),)
 
 # Social widget
 #SOCIAL = (('github: Donald', 'https://github.com/dburr'),
@@ -35,19 +40,16 @@ THEME = 'themes/pelican-bootstrap3'
 OUTPUT_PATH = 'output'
 PATH = 'content'
 
-# theme settings for pelican-bootstrap3
-SITELOGO = 'images/logo.png'
-
-#CC_LICENSE = "CC-BY-NC-SA"
-CC_LICENSE_DERIVATIVES = "ShareAlike"
-CC_LICENSE_COMMERCIAL = "No"
-
 # Tell Pelican to add 'powerpc' to the output dir
 STATIC_PATHS = ['images', 'powerpc']
 
+# theme settings for pelican-bootstrap3
+CC_LICENSE_DERIVATIVES = "ShareAlike"
+CC_LICENSE_COMMERCIAL = "No"
+
 GITHUB_USER = 'VCTLabs'
 GITHUB_SHOW_USER_LINK = True
-GITHUB_REPO_COUNT = "2"
+GITHUB_REPO_COUNT = "1"
 
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
