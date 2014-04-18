@@ -18,11 +18,11 @@ See the following upstream URLs for documentation and source:
 
 The first link above describes the install process for pelican; don't run 
 the pelican-quickstart tool, since we already have our own repo (clone the 
-vct-web repo instead).  To run the pelican tools, however, you'll need to 
-install pelican, which should pull in all the required dependencies.  The 
+vct-web repo instead).  To run the pelican build tools, however, you'll need 
+to install pelican, which should pull in all the required dependencies.  The 
 current rub is that not all deps are packaged in debian wheezy; I didn't 
 check anything else, but at least three or four will probably be missing. 
-I may look at packaging then as debs and/or ebuilds, but for now I did it 
+I may look at packaging them as debs and/or ebuilds, but for now I did it 
 the documented way above (more or less).
 
 It's up to you if you want to use the python virtualenv thing to install 
@@ -71,7 +71,19 @@ current VCT web site.
 
 The current theme that I like so far is pelican-bootstrap3 - see the theme 
 readme file from DandyDev above for config options, features, etc (also the 
-primary pelican docs).
+primary pelican docs).  Clone it to get the latest updates::
+
+ $ git clone https://github.com/DandyDev/pelican-bootstrap3.git
+
+The current pelicanconf.py points directly to the pelican-bootstrap3 dir.
+
+Lastly, I haven't tried markdown (and I haven't read anything about mixing 
+the two together in the same site files) but the above install should 
+support both Markdown and rSt syntax.  All I've used so far is the latter, 
+and it works pretty well.  That said, there are a few HTML-specific hacks 
+in the index.rst file for tweaking the layout and/or text formatting.  The 
+alternative is tweaking the theme itself (templates, static css) which I'll 
+leave as an exercise for the reader...
 
 ReStructuredText references
 ---------------------------
