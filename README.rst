@@ -11,8 +11,10 @@ See the following upstream URLs for documentation and source:
 
 * http://docs.getpelican.com/en/3.3.0/getting_started.html
 * https://gist.github.com/josefjezek/6053301  (secondary)
+* http://pirsquared.org/blog/pelican-tags-vs-categories.html
 * https://github.com/getpelican/pelican-themes
 * https://github.com/DandyDev/pelican-bootstrap3  (current theme)
+* http://oncrashreboot.com/elegant-best-pelican-theme-features
 * https://github.com/getpelican/pelican-blog
 * https://github.com/VCTLabs/vct-web
 
@@ -86,9 +88,54 @@ alternative is tweaking the theme itself (templates, static css) which I'll
 leave as an exercise for the reader...
 
 ReStructuredText references
----------------------------
++++++++++++++++++++++++++++
 
 * http://docutils.sourceforge.net/docs/user/rst/quickref.html
 * http://docutils.sourceforge.net/rst.html
 * http://docutils.sourceforge.net/docs/ref/rst/roles.html
 
+Example Workflow for Adding/Modifying Content
+---------------------------------------------
+
+The process for working with the new site (either configuration or content) is 
+probably more like developing software than it is like modifying static HTML or 
+posting through a web interface.  This also won't include making theme mods, 
+other than creating a custom style sheet and using the existing config option. 
+If we need to make our own custom theme, then we'll fork that bridge when we 
+come to it...
+
+Once you have a pelican install (on your dektop, a VM, remote machine, whatever) 
+and you've cloned the vct-web repo, then the process would look something like 
+this:
+
+* cd into your local clone of vct-web
+* make your changes using your favorite editor
+
+  - edit one of the static .rst files or add a new one -or-
+  - make a new article file (using the default template)
+
+* update/check the metadata and make sure it's what you want
+
+  - tags and categries are key to populating the links, etc
+  - tags and categories are free-form, but they get processed differently
+
+    + tags are the typical "cloud" so more is better (up to a point)
+    + categories get menu entries, so we don't want too many, also
+      we should decide on a "reasonable" set to use and think hard
+      about adding new ones on-the-fly
+
+* or, make changes to style sheets, etc, and follow the same process
+* save your changes, check with "git diff", view with local server/editor
+  (repeat as needed)
+
+* clean and build (if errors, fix them and repeat)
+* upload to web server
+
+It actually goes pretty quick once you've done it a few times; I'm not sure if 
+vi has an rSt mode, but ReText is a decent little gtk-based .rst editor with 
+a view mode (among other things).  Otherwise you can run the local python 
+http server to see how things get rendered.
+
+I just fixed my nested bullets in ReText, and the error messages were reasonably 
+helpful, provided you have the reStructuredText documentation.  Start with the 
+QuickRef linked above (it has links to the details of each entry).

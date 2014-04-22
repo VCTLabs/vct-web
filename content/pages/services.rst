@@ -83,7 +83,8 @@ Hardware:
 * Ethernet, ATM, Compact PCI protocols
 * x86, x86_64, PowerPC, ARM, MIPS
 
-Engineering Staff:
+Engineering Staff
+-----------------
 
 * Stephanie Lockwood-Childs (PhD, 2002, Gentoo Developer, 2005)
 * Ron Lockwood-Childs (B.S., 1995)

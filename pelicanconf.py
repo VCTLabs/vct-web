@@ -12,6 +12,15 @@ SITELOGO_SIZE = '60'
 TIMEZONE = 'PST8PDT'
 
 DEFAULT_LANG = u'en'
+DATE_FORMAT = {
+    'en': ('en_US','%a, %d %b %Y'),
+}
+
+WEBASSETS = (True)
+TYPOGRIFY = (True)
+
+PDF_GENERATOR = False
+REVERSE_CATEGORY_ORDER = False
 
 # Feed generation is usually not desired when developing
 #FEED_ALL_ATOM = None
