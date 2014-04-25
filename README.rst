@@ -37,7 +37,7 @@ For debian/Ubuntu, follow the above guide, simplifying as follows::
 
  $ sudo apt-get install git-core build-essential python-dev python-setuptools
  $ sudo easy_install pip
- $ sudo pip install pelican markdown ghp-import shovel
+ $ sudo pip install pelican markdown ghp-import shovel typogrify
 
 Setup your git config as documented in the secondary doc link above.  Clone 
 the vct web repo::
