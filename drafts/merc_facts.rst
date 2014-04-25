@@ -2,6 +2,8 @@
 The Mercury Programming Language
 ================================
 
+by Nick Lockwood
+
 Infrequently Asked Question (IAQ): What is the Mercury programming language, and what is the point of it?
 ---------------------------------------------------------------------------------------------------------
 
