@@ -8,7 +8,6 @@ This is a Title
 :category: Maintopic
 :slug: main_topic_name
 :summary: Template for example article metadata
-:save_as: articles/main_topic_name.html
 
 This is the expanded summary paragraph.  Or for shorter ones, just one or two 
 paragraphs with a title should be okay.  Use your own judgement based on size 
