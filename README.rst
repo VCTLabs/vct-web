@@ -112,7 +112,7 @@ this:
 * make your changes using your favorite editor
 
   - edit one of the static .rst files or add a new one -or-
-  - make a new article file (using the default template)
+  - make a new article file (using the default template, article_template.rst)
 
 * update/check the metadata and make sure it's what you want
 
@@ -128,13 +128,14 @@ this:
 * save your changes, check with "git diff", view with local server/editor
   (repeat as needed)
 
-* clean and build (if errors, fix them and repeat)
+* clean and build "pelican -s pelicanconf.py" (if errors, fix them and repeat)
 * upload to web server
 
 It actually goes pretty quick once you've done it a few times; I'm not sure if
 vi has an rSt mode, but ReText is a decent little gtk-based .rst editor with
 a view mode (among other things).  Otherwise you can run the local python
-http server to see how things get rendered.
+http server (e.g. "./develop_server.sh start 8080" to run on port 8080) 
+to see how things get rendered.
 
 I just fixed my nested bullets in ReText, and the error messages were reasonably
 helpful, provided you have the reStructuredText documentation.  Start with the
