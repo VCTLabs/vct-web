@@ -4,7 +4,7 @@ This is a Title
 
 :date: 2014-04-25
 :author: Your Name
-:tags: subtopic1 subtopic2 suptopic3
+:tags: subtopic, different subtopic, another subtopic
 :category: Maintopic
 :slug: main_topic_name
 :summary: Template for example article metadata
