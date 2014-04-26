@@ -1,3 +1,4 @@
+=======
 PowerPC
 =======
 
@@ -6,6 +7,7 @@ PowerPC
 :slug: powerpc
 :summary: Ron's PowerPC diagnostic page
 :save_as: pages/powerpc.html
+:status: hidden
 
 Power PC Software Development
 -----------------------------

@@ -1,3 +1,4 @@
+========
 Services
 ========
 
@@ -82,18 +83,4 @@ Hardware:
 * Eagle PCB Layout, Mentor PCB Layout
 * Ethernet, ATM, Compact PCI protocols
 * x86, x86_64, PowerPC, ARM, MIPS
-
-Engineering Staff
------------------
-
-* Stephanie Lockwood-Childs (PhD, 2002, Gentoo Developer, 2005)
-* Ron Lockwood-Childs (B.S., 1995)
-* Hua Lee (PhD, 1980)
-* Stephen Arnold (M.S., 1990, Gentoo Developer, 2003)
-* Gary Kinnison (M.S., 1990)
-* Homer Parker (Gentoo Developer, 2005)
-* Donald Burr (??)
-* Nick Lockwood (??)
-* Glenn Zickert (??)
-* Crystal Lockwood (??)
 

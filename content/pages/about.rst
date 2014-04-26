@@ -1,3 +1,4 @@
+=====
 About
 =====
 
@@ -7,23 +8,6 @@ About
 :summary: Main about page
 :save_as: pages/about.html
 
-About VCT Labs, Inc.
---------------------
-
-Vanguard Computer Technology Labs, Inc. is an Open Source Linux consulting 
-shop with hardware, software, and process expertise, as well as extensive 
-experience in education and training.  Staff highlights include several 
-with graduate degrees and active/former Gentoo Linux and OpenEmbedded 
-developers.
-
-Some example areas of expertise include:
-
-* Embedded device and firmware design, embedded Linux OS tailoring
-* New board bringup, BSP support, device drivers, kernel/bootloader mods
-* Software life-cycle and process support, system architecture definition
-* Development tools/SDKs, process tools (CM/CI, test/verification, release)
-* Security/IA accreditation and system hardening support (PAX, SELinux, netfilter)
-* System and software criticality and risk assessment, formal verification
 
 Next Steps
 ----------
