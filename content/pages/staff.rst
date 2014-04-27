@@ -23,3 +23,6 @@ Engineering Staff
 * Glenn Zickert (??)
 * Crystal Lockwood (??)
 
+Please see the `Bios page <../pages/bios.html>`_ for more info.
+
+
