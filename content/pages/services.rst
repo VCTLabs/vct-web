@@ -27,7 +27,6 @@ Project Experience
 * Micro Intelligent Navigation Robot Systems
 * Design and Development of Embedded Real-Time Systems
 * Embedded Diagnostics and Performance Analysis
-* VxWorks Device Drivers
 * Linux Kernel Device Drivers
 * Wireless Ethernet Design
 * Computer Network Design
@@ -73,14 +72,12 @@ Programming Languages:
 Operating Systems:
 
 * Linux, BSD, Unix (Solaris, HP/UX)
-* VxWorks
 * Android, iOS, WebOS
 
 Hardware:
 
-* FPGA implementation and design
+* FPGA design and implementation
 * PC/Server building and configuration
-* Eagle PCB Layout, Mentor PCB Layout
-* Ethernet, ATM, Compact PCI protocols
+* OrCAD schematics
 * x86, x86_64, PowerPC, ARM, MIPS
 
