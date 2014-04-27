@@ -15,6 +15,9 @@ Summary: A synopsis of the "Heartbleed" bug in OpenSSL, and what you need to kno
 
 Say something profound and informative about [CVE-2014-0160][CVE] aka [Heartbleed][HEARTBLEED].
 
+* Intro
+
+
 Be sure and mention:
 
 * [SSL Labs Heartbleed server tester][SSLLABS]
@@ -23,6 +26,7 @@ Be sure and mention:
 * It's not as bad as some people are making it out to be
 * What can be leaked - server SSL cert keys, usernames/passwords, etc.
 * Browser certificate revocation - need to make sure this is enabled!
+* affects more than web servers, affects anything that links against openssl, e.g. ssh, openvpn, ...
 
 ---
 
