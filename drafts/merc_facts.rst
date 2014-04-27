@@ -1,11 +1,18 @@
-================================
 The Mercury Programming Language
-================================
+################################
 
-by Nick Lockwood
+:date: 2014-05-24 
+:author: Nick Lockwood
+:tags: mercury language, functional programming, logic programming
+:category: programming
+:slug: mercury_programming_language
+:summary: What is the Mercury programming language, and what is the point of it?
+
+High-level discussion of the Mercury programming language, covering its origin and 
+how it is categorized in various common language-classification schemes
 
 Infrequently Asked Question (IAQ): What is the Mercury programming language, and what is the point of it?
----------------------------------------------------------------------------------------------------------
+=========================================================================================================
 
 The Mercury programming language was developed in Australia, by the computer science
 department at the University of Melbourne.  It was funded by various grants.  The

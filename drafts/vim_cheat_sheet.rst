@@ -1,8 +1,22 @@
-======================================
 Yet another vim cheatsheet: vim basics
-======================================
+######################################
 
-by Stephanie Lockwood-Childs
+:date: 2005-02-24
+:tags: vim, vi
+:category: cheatsheets
+:slug: vim_basics_cheatsheet
+:author: Stephanie Lockwood-Childs
+:summary: vim cheatsheet covering editing basics
+
+vim cheatsheet that covers editing basics (and which mostly applies
+to other vi implementations as well)
+
+vim basics cheatsheet
+=====================
+
+This cheatsheet is intended to help those who "barely can get around"
+in vi to become competent vim users. It is not intended for complete
+beginners, since an understanding of vi editing modes is assumed.
 
 Most of these commands come from original vi, and theoretically will work in
 simple vi applications rather than just vim. "Theoretically" refers to a caveat
@@ -10,6 +24,14 @@ that many embedded systems run an extremely cut-down busybox vi, leaving
 out a lot of supposedly standard vi features (sometimes explicitly warning 
 that a feature is "not implemented", and sometimes just doing a weird edit
 instead of the intended one).
+
+Notable vim-specific commands included in this list for being incredibly
+useful when available:
+
+* visual selection commands, in particular, column-selection mode for convenient
+  editing of text in fixed-width columns
+* macro recording and playback, which can simplify repetitive editing tasks so easily
+  that it has replaced many a throw-away perl/python/ruby/whatever script
 
 MOVEMENT
 --------
