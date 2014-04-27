@@ -89,23 +89,30 @@ Examples
 
 * display summary of packets to/from eth1 network card, skipping hostname lookups
 
+::
+
     tcpdump -i eth1 -n
 
 * display summary of packets to/from any web server
+
+::
 
     tcpdump -i any port http
 
 * save summary of ping packets to/from google.com to a file
 
+::
+
     tcpdump -i any icmp and host google.com > /tmp/google_ping.txt
 
 * capture all traffic to a file for later analysis (e.g. in wireshark)
+
+::
 
     tcpdump -i any -w /tmp/saved_traffic.pcap -v  
 
 * capture all traffic except your own ssh connection to a file 
 
-    tcpdump -i any -w /tmp/saved_traffic.pcap -v "not ( port ssh and host me.org )"
+::
 
-**NOTE:**
-  ignore any unintentional wrapping of command-lines due to html display, each should be a single line
+    tcpdump -i any -w /tmp/saved_traffic.pcap -v "not ( port ssh and host me.org )"
