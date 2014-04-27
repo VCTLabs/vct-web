@@ -2,15 +2,22 @@
 Dos and Don'ts for generating code/test coverage data (for C, C++, Java, and Python)
 ====================================================================================
 
-1) **Do** generate coverage data for your code; it should be especially helpful 
-for pointing out where test drivers are exercising code (and where they aren't).  
-**Don't** rely on just line or branch counts and shoot for higher numbers.  For 
-exmple, use  the branch count information to make sure you're executing all the 
-appropriate decision paths, etc.
+:date: 2014-04-03
+:author: Steve Arnold
+:tags: code coverage, test coverage, software testing, gcov, gcc
+:category: Programming
+:slug: coverage-with-gcov
+:summary: Overview of using gcov to collect coverage data
 
-2) **Do** try it under "normal" or ad-hoc execution conditions to look at the 
-main flow(s) through your code. **Don't** restrict your use of coverage data 
-to testing only.
+
+Tips
+====
+
+.. admonition:: Note
+
+    1) **Do** generate coverage data for your code; it should be especially helpful for pointing out where test drivers are exercising code (and where they aren't).  **Don't** rely on just line or branch counts and shoot for higher numbers.  For exmple, use  the branch count information to make sure you're executing all the appropriate decision paths, etc.
+
+    2) **Do** try it under "normal" or ad-hoc execution conditions to look at the main flow(s) through your code. **Don't** restrict your use of coverage data to testing only.
 
 The current tools described here include the following:
 

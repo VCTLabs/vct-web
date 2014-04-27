@@ -2,9 +2,22 @@
 Dos and Don'ts for profiling and performance optimization
 =========================================================
 
-1) **Do** profile your code to look for performance bottlenecks, but **don't** worry about hand-optimizing your code right away.  Readable and obvious is much better from a maintenance standpoint than obtuse or cryptic.  Also, if you put too much into one line of code, you may actually be defeating the code coverage analysis.
+:date: 2014-04-17
+:author: Steve Arnold
+:tags: profiling, software testing, software performance, gprof, gcc
+:category: Programming
+:slug: profiling-with-grof
+:summary: Overview of using gprof to collect profiling data
 
-2) **Do** think about Big "O" when making algorithm selections, but **don't** worry about trying to out-think the compiler optimizations.  Trust in gcc/g++ at least up to the -O2 optimization level, but don't use -O3 (which is known to break certain constructs).
+
+Tips
+====
+
+.. admonition:: Note
+
+    1) **Do** profile your code to look for performance bottlenecks, but **don't** worry about hand-optimizing your code right away.  Readable and obvious is much better from a maintenance standpoint than obtuse or cryptic.  Also, if you put too much into one line of code, you may actually be defeating the code coverage analysis.
+
+    2) **Do** think about Big "O" when making algorithm selections, but **don't** worry about trying to out-think the compiler optimizations.  Trust in gcc/g++ at least up to the -O2 optimization level, but don't use -O3 (which is known to break certain constructs).
 
 Using gprof
 ===========

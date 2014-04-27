@@ -1,6 +1,14 @@
-==========================================================================
-Using the Git repository - a basic introduction with command-line examples
-==========================================================================
+======================================================================
+Yet Another Git Intro: A basic introduction with command-line examples
+======================================================================
+
+:date: 2014-04-25
+:author: Steve Arnold
+:tags: source code, source code repository, software configuration management, git
+:category: Programming
+:slug: git-intro
+:summary: Overview of using git to manage source code
+
 
 Getting Started
 ===============
@@ -8,7 +16,7 @@ Getting Started
 Installing git
 --------------
 
-Fedora 7, Ubuntu 8, and later: The git-core package is available through the standard package repositories.  Other Linux and BSD environments should be similar, eg, *emerge git* on Gentoo will install the needed commands and dependencies.  If your platform does not package git, you may download the latest stable release from "http://www.kernel.org/pub/software/scm/git/".  Windows users are recommended to install either TortiseGit or Cygwin (the latter includes a bash shell and many other Linux programs).
+Fedora 7, Ubuntu 8, and later: The git-core package is available through the standard package repositories.  Other Linux and BSD environments should be similar, eg, *emerge git* on Gentoo will install the needed commands and dependencies.  If your platform does not package git, you can download the latest stable release from "http://www.kernel.org/pub/software/scm/git/".  Windows users are recommended to install either TortiseGit or Cygwin (the latter includes a bash shell and many other Linux programs).
 
 Basic Tasks
 -----------
@@ -68,7 +76,21 @@ To check in all local modifications to your local repository::
 Undo recent commits
 -------------------
 
-Sometimes you have made a few commits, or just pulled a change, and simply want those commits to go away::
+If the commits are local only, then "git reset" is probably appropriate.  OTOH, if the commits are already public, ie, they've been pushed to a remote repository and potentially cloned by someone else, then "git reset" is most likely **not** the right answer.  That said, if you're working completely by yourself, then any method is viable (again, depending on what your goals are).
+
+To make one or more commits go away cleanly when working with others, the right tool is almost certainly "git revert".  You can specify one commit or a range, and git will make a new commit that exactly reverts the changes made by the specified commit(s).  Suppose you wanted to get of two commits, made you've already made two new commits (on top of the bad ones) that you want to keep.  First, get the commit hashes for the two bad commits. then revert them::
+
+    $ git log --oneline | head -n 4
+    
+    498e425 added three new drafts, still need metadata
+    87b2a14 latest updates to static pages
+    6dcdf91 added artile template with example rst metadata
+    6fcd2c0 Add note for ubuntu users to use apt-get version of pip instead
+    
+    $ git revert 6fcd2c0..6dcdf91
+
+
+Sometimes you have made a few commits, or just pulled a change, and simply want those commits to go away completely::
 
 	$ cd package-name
 	$ git reset --hard HEAD~2	# make last 2 commits disappear
@@ -102,6 +124,9 @@ List all commits to a specific file::
 
 Branches
 ========
+
+Basics
+------
 
 List all local branches (add -a to remote branches too)::
 
