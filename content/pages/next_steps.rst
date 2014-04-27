@@ -1,6 +1,3 @@
-==========
-Next Steps
-==========
 
 :date: 2014-04-15 20:50
 :category: VCT
@@ -10,13 +7,13 @@ Next Steps
 :status: hidden
 
 
-Next Steps
-----------
+Have Project Questions?
+-----------------------
 
-Learn more about VCT and how we can help:
+Learn more about `VCT <../pages/services.html>`_ and how we can help:
 
 Questions about architecture definition and requirements analysis? 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 An architecture framework and supporting tools can really help:
 
