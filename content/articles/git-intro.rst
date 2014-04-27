@@ -5,7 +5,7 @@ Yet Another Git Intro: A basic introduction with command-line examples
 :date: 2014-04-25
 :author: Steve Arnold
 :tags: source code, source code repository, software configuration management, git
-:category: Programming
+:category: programming
 :slug: git-intro
 :summary: Overview of using git to manage source code
 
@@ -53,7 +53,7 @@ or more simply, to pull from the default branch/location from which you cloned::
 
 	$ cd package-name
 	$ git pull
-	
+
 will pull from the origin repository and default branch defined in the package-name/.git/config file.
 
 One way to undo all local modifications::
@@ -81,12 +81,12 @@ If the commits are local only, then "git reset" is probably appropriate.  OTOH, 
 To make one or more commits go away cleanly when working with others, the right tool is almost certainly "git revert".  You can specify one commit or a range, and git will make a new commit that exactly reverts the changes made by the specified commit(s).  Suppose you wanted to get of two commits, made you've already made two new commits (on top of the bad ones) that you want to keep.  First, get the commit hashes for the two bad commits. then revert them::
 
     $ git log --oneline | head -n 4
-    
+
     498e425 added three new drafts, still need metadata
     87b2a14 latest updates to static pages
     6dcdf91 added artile template with example rst metadata
     6fcd2c0 Add note for ubuntu users to use apt-get version of pip instead
-    
+
     $ git revert 6fcd2c0..6dcdf91
 
 
