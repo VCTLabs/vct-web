@@ -8,6 +8,7 @@ HIDE_SITENAME = True
 SITEURL = 'http://www.vctlabs.com'
 SITELOGO = 'images/logo.png'
 SITELOGO_SIZE = '60'
+FAVICON = 'images/favicon.png'
 
 TIMEZONE = 'PST8PDT'
 
@@ -49,6 +50,11 @@ THEME = 'themes/pelican-bootstrap3'
 OUTPUT_PATH = 'output'
 PATH = 'content'
 
+PLUGIN_PATH = 'plugins'
+#PLUGINS = [u"disqus_static"]
+#DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
+#DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
+
 # Tell Pelican to add 'powerpc' to the output dir
 STATIC_PATHS = ['images', 'powerpc']
 
@@ -75,4 +81,3 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 
-FAVICON = 'images/favicon.png'

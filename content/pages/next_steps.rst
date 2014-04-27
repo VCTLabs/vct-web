@@ -1,6 +1,6 @@
-=====
-About
-=====
+==========
+Next Steps
+==========
 
 :date: 2014-04-15 20:50
 :category: VCT
@@ -55,4 +55,5 @@ GNU/Linux and other open source tools.  A few example starting points:
 * `Yocto Project Documentation <https://www.yoctoproject.org/documentation/current>`_
 * `RaspberryPi.Org <http://www.raspberrypi.org/>`_
 
-`Tell us <contact.html>`_ about your project, and we can probably help.
+`Tell us <../pages/contact.html>`_ about your project, and we can probably help.
+

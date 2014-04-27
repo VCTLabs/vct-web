@@ -15,10 +15,12 @@
    :alt: Santa Barbara Snow
    :align: center
 
-Vanguard Computer Technology Labs, Inc. is an Open Source Technology group 
+Vanguard Computer Technology Labs, Inc. is an Engineering Services company 
 with expertise in hardware, software, process, education, and training.  
 Staff highlights include assorted graduate degrees and several active/former 
-Gentoo Linux and OpenEmbedded developers.
+Gentoo Linux and OpenEmbedded developers.  VCT Labs, Inc. offers consulting 
+and product development services for projects using Open Source technology, 
+as well as related education and training.
 
 Some example areas of expertise include:
 
@@ -28,5 +30,7 @@ Some example areas of expertise include:
 * Development tools/SDKs, process tools (CM/CI, test/verification, release)
 * Security/IA accreditation and system hardening support (PAX, SELinux, netfilter)
 * System and software criticality and risk assessment, formal verification
+* Facility risk and hazard assessment, air toxics risk assessment modeling
 
-Feel free to browse the articles and github repos, or contact us for more information.
+Feel free to browse the articles and github repos, or `contact us <./pages/contact.html>`_ for more information.  Need `somewhere to start <./pages/next_steps.html>`_?
+
