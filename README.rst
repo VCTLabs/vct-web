@@ -94,6 +94,12 @@ ReStructuredText references
 * http://docutils.sourceforge.net/rst.html
 * http://docutils.sourceforge.net/docs/ref/rst/roles.html
 
+Markdown references
++++++++++++++++++++
+
+* https://daringfireball.net/projects/markdown/basics
+* http://daringfireball.net/projects/markdown/syntax
+
 Example Workflow for Adding/Modifying Content
 ---------------------------------------------
 
@@ -134,7 +140,7 @@ this:
 It actually goes pretty quick once you've done it a few times; I'm not sure if
 vi has an rSt mode, but ReText is a decent little gtk-based .rst editor with
 a view mode (among other things).  Otherwise you can run the local python
-http server (e.g. "./develop_server.sh start 8080" to run on port 8080) 
+http server (e.g. "./develop_server.sh start 8080" to run on port 8080)
 to see how things get rendered.
 
 I just fixed my nested bullets in ReText, and the error messages were reasonably

@@ -2,6 +2,7 @@
 output
 pelicanconf_local.py
 *.pid
+themes/
 
 #Python
 *.py[cod]
