@@ -1,3 +1,4 @@
+Status: draft
 Title: Heartbleed: What You Need to Know
 Date: 2014-04-25 23:40
 Tags: heartbleed, heartbeat, openssl, ssl, security, encryption
