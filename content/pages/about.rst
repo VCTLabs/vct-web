@@ -9,49 +9,28 @@ About
 :save_as: pages/about.html
 
 
-Next Steps
-----------
+Vanguard Computer Technology Labs (aka VCT Labs) was incorporated in California
+in May 2000.  The founders were associated with the `University of California at
+Santa Barbara Electrical and Computer Engineering <ECE_>`_ as students or faculty.  `VCT
+Labs is located in Goleta, California <Location_>`_, near UCSB .
 
-Learn more about VCT and how we can help:
+.. _Location: http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=5951+encina+rd+goleta&ie=UTF8&hq=&hnear=5951+Encina+Rd,+Goleta,+Santa+Barbara,+California+93117&ll=34.442522,-119.826014&spn=0.008406,0.019248&t=h&z=16
 
-Questions about architecture definition and requirements analysis? 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. _ECE: http://www.ece.ucsb.edu/
 
-An architecture framework and supporting tools can really help:
+VCT Labs offers technical services for computer system hardware and software
+development.  Contracts have included embedded system development as well as
+general computer system development, both for government work and in the
+commercial arena.
 
-* `Enterprise Architecture Framework <http://www.architectureframework.com/>`_
+VCT Labs specializes in the application of Open Source technology to real-world
+problems.  The dedication of many staff members to open technology extends
+beyond their professional duties to their personal time.  Our software
+engineers go home and run Linux and other Open Source software on our personal
+computers.  Several core members, including the president, of our local Linux User Group 
+are members of VCT engineering staff.  VCT engineers participate as
+members of Open Source projects.  Hardware-related personal projects 
+include using FPGAs and arduinos for electrical monitoring of old (we like
+to say "classic") cars from before the era of on-board computers, or
+participating in the RepRap 3-D printing community.
 
-And don't let the term *enterprise* put you off, as there are many levels of 
-refinement and detail in something like the above (and pretty much anything 
-more complex than a thimble can use at least a few architectural pieces 
-documented).
-
-One thing about requirements engineering/analysis, no matter what you call 
-them (use cases, user stories, requirements specifications) you should take 
-the time to derive some relevant (and testable) technical and/or performance 
-requirements in addition to the user-focused parts.  Track and trace them to 
-code and test cases, and you're half way home...
-
-Questions about system security and information protection?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-See the `DISA STIG documentaion and support tools <http://iase.disa.mil/stigs/>`_
-(hint: they can be used to help assess and understand the risks of *any* 
-system connected to the outside world).  One of the default security 
-enhancements in the Linux kernel has been around for many years:
-
-* `Security Enhanced Linux <http://selinuxproject.org/page/Main_Page>`_
-
-Questions about open source software development, embedded Linux, or low cost embedded hardware?
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-There are abundant resources for these topics (see the sidebar, including 
-the VCT gihub repos) so it all depends on what kinds of project ideas you 
-have percolating.  We design and build large and small systems based on 
-GNU/Linux and other open source tools.  A few example starting points:
-
-* `Gentoo x86 Handbook <http://www.gentoo.org/doc/en/handbook/handbook-x86.xml>`_ (available for multiple architectures)
-* `Yocto Project Documentation <https://www.yoctoproject.org/documentation/current>`_
-* `RaspberryPi.Org <http://www.raspberrypi.org/>`_
-
-`Tell us <contact.html>`_ about your project, and we can probably help.
