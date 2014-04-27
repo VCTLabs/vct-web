@@ -78,7 +78,7 @@ Undo recent commits
 
 If the commits are local only, then "git reset" is probably appropriate.  OTOH, if the commits are already public, ie, they've been pushed to a remote repository and potentially cloned by someone else, then "git reset" is most likely **not** the right answer.  That said, if you're working completely by yourself, then any method is viable (again, depending on what your goals are).
 
-To make one or more commits go away cleanly when working with others, the right tool is almost certainly "git revert".  You can specify one commit or a range, and git will make a new commit that exactly reverts the changes made by the specified commit(s).  Suppose you wanted to get of two commits, made you've already made two new commits (on top of the bad ones) that you want to keep.  First, get the commit hashes for the two bad commits. then revert them::
+To make one or more commits go away cleanly when working with others, the right tool is almost certainly "git revert".  You can specify one commit or a range, and git will make a new commit that exactly reverts the changes made by the specified commit(s).  Suppose you wanted to get rid of two commits, and you've already made two new commits (on top of the bad ones) that you want to keep.  First, get the commit hashes for the two bad commits, then revert them::
 
     $ git log --oneline | head -n 4
 
