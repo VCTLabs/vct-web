@@ -5,7 +5,7 @@ Dos and Don'ts for generating code/test coverage data (for C, C++, Java, and Pyt
 :date: 2014-04-03
 :author: Steve Arnold
 :tags: code coverage, test coverage, software testing, gcov, gcc
-:category: Programming
+:category: programming
 :slug: coverage-with-gcov
 :summary: Overview of using gcov to collect coverage data
 
@@ -28,9 +28,9 @@ The current tools described here include the following:
 Using gcov
 ==========
 
-Once your code is at least running local unit tests, and *if* you see any 
-performance issues, then you can add the profiling targets to your makefile 
-or python code.  For non-kernel code, you should add a make target by following 
+Once your code is at least running local unit tests, and *if* you see any
+performance issues, then you can add the profiling targets to your makefile
+or python code.  For non-kernel code, you should add a make target by following
 this simple example::
 
      $ gcc -fprofile-arcs -ftest-coverage tmp.c
@@ -59,7 +59,7 @@ Please try some of the available gcov options, such as:
 -c
 --branch-counts
 
-    Write branch frequencies as the number of branches taken, rather than the 
+    Write branch frequencies as the number of branches taken, rather than the
     percentage of branches taken.
 
 -f
@@ -70,7 +70,7 @@ Please try some of the available gcov options, such as:
 Generating coverage data for the kernel
 =======================================
 
-To generate coverage data for the Linux kernel, it's as easy as rebuilding the 
+To generate coverage data for the Linux kernel, it's as easy as rebuilding the
 kernel with the following options enabled::
 
   CONFIG_GCOV_KERNEL=y
@@ -91,14 +91,14 @@ and run the coverge tool on one or more source files::
   Lines executed:52.17% of 46
   kernel/gcov/base.c:creating 'base.c.gcov'
 
-Code coverage information for the specified source file(s) can be found in the 
-files created by gcov. Alternatively, use LCOV to obtain the information 
+Code coverage information for the specified source file(s) can be found in the
+files created by gcov. Alternatively, use LCOV to obtain the information
 automatically.
 
 Quick start using coverage.py
 =============================
 
-Install coverage.py from the `coverage page on the Python Package Index`_, or by 
+Install coverage.py from the `coverage page on the Python Package Index`_, or by
 using “easy_install coverage”.  For a few more details, see Installation_.
 
 Use coverage run to run your program and gather data::
@@ -116,7 +116,7 @@ Use coverage report to report on the results::
     -------------------------------------------------------
     TOTAL                        76     10    87%
 
-For a nicer presentation, use coverage html to get annotated HTML listings detailing 
+For a nicer presentation, use coverage html to get annotated HTML listings detailing
 missed lines::
 
     $ coverage html

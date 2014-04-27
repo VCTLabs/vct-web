@@ -5,7 +5,7 @@ Dos and Don'ts for profiling and performance optimization
 :date: 2014-04-17
 :author: Steve Arnold
 :tags: profiling, software testing, software performance, gprof, gcc
-:category: Programming
+:category: programming
 :slug: profiling-with-grof
 :summary: Overview of using gprof to collect profiling data
 
@@ -115,7 +115,7 @@ Here is some of the output from the call graph::
                         0.00    0.00       1/1           instructions(void) [16]
                         0.00    0.00       1/1           Life::initialize(void) [15]
         -----------------------------------------------
-                                                         
+
         [3]     42.5    0.00    0.17                 _start [3]
                         0.00    0.17       1/1           main [2]
         -----------------------------------------------
