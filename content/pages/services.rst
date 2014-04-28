@@ -24,11 +24,9 @@ Project Experience
 * Systems Engineering, Integration, & Architecture Support
 * Numerical Analysis and Algorithm Development
 * Real-Time Data Acquistion, Processing, and Analysis Systems
-* Micro Intelligent Navigation Robot Systems
 * Design and Development of Embedded Real-Time Systems
 * Embedded Diagnostics and Performance Analysis
 * Linux Kernel Device Drivers
-* Wireless Ethernet Design
 * Computer Network Design
 * Network Security Audits and Information Assurance
 * Graphical User Interface Design
