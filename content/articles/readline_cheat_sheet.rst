@@ -22,9 +22,9 @@ Use bash 'bind' builtin command:
 
 ::
 
-bind -v  # show readline options
-bind -p  # show readline functions and corresponding key mappings
-bind -q yank  # show key combination for function yank
+  bind -v  # show readline options
+  bind -p  # show readline functions and corresponding key mappings
+  bind -q yank  # show key combination for function yank
 
 Details:
 
@@ -102,15 +102,15 @@ Reusing history
 
 ::
 
-previous-history (up arrow, ctrl-p)
-next-history (down arrow, ctrl-n)
-history-search-backward (unbound by default)
-history-search-forward (unbound by default)
-reverse-search-history (ctrl-r)
-forward-search-history (ctrl-s -- poorly chosen default)
-yank-nth-arg (@<number> alt-ctrl-y)
-shell-expand-line (alt-ctrl-e)
-magic-space (unbound by default)
+  previous-history (up arrow, ctrl-p)
+  next-history (down arrow, ctrl-n)
+  history-search-backward (unbound by default)
+  history-search-forward (unbound by default)
+  reverse-search-history (ctrl-r)
+  forward-search-history (ctrl-s -- poorly chosen default)
+  yank-nth-arg (@<number> alt-ctrl-y)
+  shell-expand-line (alt-ctrl-e)
+  magic-space (unbound by default)
 
 Details:
 
@@ -182,9 +182,9 @@ Completions
 
 ::
 
-complete (tab)
-menu-complete (unbound by default)
-dynamic-complete-history (alt-tab)
+  complete (tab)
+  menu-complete (unbound by default)
+  dynamic-complete-history (alt-tab)
 
 Details:
 
@@ -207,9 +207,9 @@ Editing commands
 
 ::
 
-transpose-chars (ctrl-t)
-undo (ctrl-_)
-revert-line (alt-r)
+  transpose-chars (ctrl-t)
+  undo (ctrl-_)
+  revert-line (alt-r)
 
 Details:
 
@@ -237,8 +237,8 @@ Movement Commands
   backward-word (alt-b)
   forward-word (alt-f)
 
-Readline w/ history expansion
------------------------------
+Readline on results of history expansion
+----------------------------------------
 
 set bash histverify option
 
