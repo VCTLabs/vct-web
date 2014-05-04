@@ -23,22 +23,22 @@ Basic Tasks
 
 First, note that you can get documentation for a command such as git log --graph with::
 
-	$ man git-log
+    $ man git-log
 
 or::
 
-	$ git help log
+    $ git help log
 
 With the latter command, you can use the manual viewer of your choice; see the git-help(1) man page for more information.
 
 You should configure git with your name and preferred email address before doing any operation. The easiest way to do so is::
 
-	$ git config --global user.name "Your Name Here"
-	$ git config --global user.email you@domain.example.com
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email you@domain.example.com
 
 To download a new package from a git repository::
 
-	$ git clone https://username@github.com/VCTLabs/vct-web.git
+    $ git clone https://username@github.com/VCTLabs/vct-web.git
 
 To avoid the username part of the above URL, use a .netrc file to store your login ID, or use an ssh public key on github and the ssh URL::
 
@@ -46,24 +46,21 @@ To avoid the username part of the above URL, use a .netrc file to store your log
 
 To update a package to the latest upstream version ("fast-forward merge")::
 
-	$ cd <dir>
-	$ git pull origin <branch-name>
+    $ git pull origin <branch-name>
 
 or more simply, to pull from the default branch/location from which you cloned::
 
-	$ cd <dir>
-	$ git pull
+    $ git pull
 
 will pull from the origin repository and default branch defined in the package-name/.git/config file.
 
 One way to undo all local modifications::
 
-	$ git checkout -f
+    $ git checkout -f
 
-To check in your own local modifications (e.g. do some refactoring, fix a bug, or apply a patch)::
+To check in your own local modifications (e.g. update the web site, do some refactoring, fix a bug, or apply a patch)::
 
-	$ cd <dir>
-	$ vi file1.rst file2.rst file3.md
+    $ vi vct-custom.css pelicanconf.py
 
 .. admonition:: Note
 
@@ -71,7 +68,7 @@ To check in your own local modifications (e.g. do some refactoring, fix a bug, o
 
 To check in all local modifications to your local repository::
 
-	$ git commit -a -m "added new stylesheet and updated pelican config for enabling plugins"
+    $ git commit -a -m "added new stylesheet and updated pelican config for enabling plugins"
 
 Undo recent commits
 -------------------
@@ -92,8 +89,7 @@ To make one or more commits go away cleanly when working with others, the right 
 
 Sometimes you have made a few commits, or just pulled a change, and simply want those commits to go away completely::
 
-	$ cd package-name
-	$ git reset --hard HEAD~2	# make last 2 commits disappear
+    $ git reset --hard HEAD~2	# erase last 2 commits
 
 This will essentially erase the top two commits, as if you had never made them. **DO NOT** do this, if you've already pushed said commits (at least not without coordination with others who may have pulled those commis).  Note that this is quite different from *git revert*, which applies a reversed patch as an additional commit.
 
@@ -102,25 +98,25 @@ Listing changes in your working dir, in diff format
 
 Display changes since last 'git add' or 'git rm'::
 
-	$ git diff
+    $ git diff
 
 Display changes since last commit::
 
-	$ git diff HEAD
+    $ git diff HEAD
 
 Obtain summary of all changes in working dir::
 
-	$ git status
+    $ git status
 
 List all commits on the current branch, with descriptions::
 
-	$ git log
+    $ git log
 
 The 'git log' option "-p" shows diffs in addition to commit messages. The option "--stat" shows the diffstat.
 
 List all commits to a specific file::
 
-	$ git log net/file3.c
+    $ git log content/pages/contact.rst
 
 Branches
 ========
@@ -128,21 +124,21 @@ Branches
 Basics
 ------
 
-List all local branches (add -a to remote branches too)::
+List all local branches (add -a to see remote branches too)::
 
-	$ git branch
+    $ git branch
 
 Make desired branch current in working directory::
 
-	$ git checkout $branch
+    $ git checkout $branch
 
 Create a new branch from master, and make it current::
 
-	$ git checkout -b alternate-theme master
+    $ git checkout -b alternate-theme master
 
 Examine which branch is current::
 
-	$ git status
+    $ git status
 
 ('git branch' also shows you the current branch, using a "*" in front)
 
@@ -151,26 +147,26 @@ Obtain a diff between current branch, and master branch
 
 In most trees with branches, .git/refs/heads/master contains the current 'vanilla' upstream tree, for easy diffing and merging. (in trees without branches, 'master' simply contains your latest changes).  The following is equivalent to git diff HEAD, when used with HEAD branch::
 
-	$ git diff master..HEAD
+    $ git diff master..HEAD
 
 Obtain a list of changes between current branch, and master branch::
 
-	$ git log master..HEAD
+    $ git log master..HEAD
 
 (this is equivalent to git log, when used with HEAD)
 
 Rather than full changeset descriptions, obtain a one-line summary of each changes::
 
-	$ git shortlog master..HEAD
+    $ git shortlog master..HEAD
 
 Merging changes from one branch to another
 ------------------------------------------
 
 Suppose that you do work on two different branches, and after work on those two branches is complete, you merge the work into master::
 
-	$ git checkout master	# switch to branch master
-	$ git merge drafts		# merge drafts into master
-	$ git merge new-theme	# merge new-theme into master
+    $ git checkout master	# switch to branch master
+    $ git merge drafts		# merge drafts into master
+    $ git merge new-theme	# merge new-theme into master
 
 Misc. Topics
 ============
@@ -180,8 +176,7 @@ Optimize your repository
 
 git is heavily optimized for fast storage and retrieval on a per-command basis. However, over a long period of time, it can be useful to perform further optimizations, including packing all git objects into single "packfile" for fast retrieval and less wasted disk space.  The following::
 
-	$ cd <dir>
-	$ git gc
+    $ git gc
 
 will optimize your repository.  You don't need to run this frequently — git is quite fast even without it.  See the 'git gc' man page for more details.
 
@@ -195,8 +190,7 @@ Tagging a particular commit
 
 In many cases, you will want to give interesting or significant commits a name, known as a tag.  The Linux kernel uses tags for each kernel version: "v2.6.21", "v2.6.22", etc.  For example, to create a new tag after a particular commit::
 
-	$ cd <dir>
-	$ git tag my-tag
+    $ git tag my-tag
 
 This creates a new tag named "my-tag", based on the current commit. You can also make an "annotated" tag, or a GPG-signed tag, so read the man page for more details.
 
