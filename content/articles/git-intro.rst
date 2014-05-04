@@ -2,7 +2,7 @@
 Yet Another Git Intro: A basic introduction with command-line examples
 ======================================================================
 
-:date: 2014-04-25
+:date: 2014-05-03
 :author: Steve Arnold
 :tags: source code, source code repository, software configuration management, git
 :category: programming
@@ -31,12 +31,12 @@ or::
 
 With the latter command, you can use the manual viewer of your choice; see the git-help(1) man page for more information.
 
-You should also configure git with your name and preferred email address before doing any operation. The easiest way to do so is::
+You should configure git with your name and preferred email address before doing any operation. The easiest way to do so is::
 
 	$ git config --global user.name "Your Name Here"
 	$ git config --global user.email you@domain.example.com
 
-Download a new package from the repository::
+To download a new package from a git repository::
 
 	$ git clone https://username@github.com/VCTLabs/vct-web.git
 
@@ -44,14 +44,14 @@ To avoid the username part of the above URL, use a .netrc file to store your log
 
     $ git clone git@github.com:VCTLabs/vct-web.git
 
-Update a package to the latest upstream version ("fast-forward merge")::
+To update a package to the latest upstream version ("fast-forward merge")::
 
-	$ cd package-name
+	$ cd <dir>
 	$ git pull origin <branch-name>
 
 or more simply, to pull from the default branch/location from which you cloned::
 
-	$ cd package-name
+	$ cd <dir>
 	$ git pull
 
 will pull from the origin repository and default branch defined in the package-name/.git/config file.
@@ -62,8 +62,8 @@ One way to undo all local modifications::
 
 To check in your own local modifications (e.g. do some refactoring, fix a bug, or apply a patch)::
 
-	$ cd package-name
-	$ vi file1.c file2.c file1.h
+	$ cd <dir>
+	$ vi file1.rst file2.rst file3.md
 
 .. admonition:: Note
 
@@ -71,7 +71,7 @@ To check in your own local modifications (e.g. do some refactoring, fix a bug, o
 
 To check in all local modifications to your local repository::
 
-	$ git commit -a -m "fix for ticket 345"
+	$ git commit -a -m "added new stylesheet and updated pelican config for enabling plugins"
 
 Undo recent commits
 -------------------
@@ -95,7 +95,7 @@ Sometimes you have made a few commits, or just pulled a change, and simply want 
 	$ cd package-name
 	$ git reset --hard HEAD~2	# make last 2 commits disappear
 
-This will "disappear" the top two commits. **DO NOT** do this, if you've already pushed said commits (at least not without coordination with others who may have pulled those commis).  Note that this is quite different from *git revert*, which applies a reversed patch as an additional commit.
+This will essentially erase the top two commits, as if you had never made them. **DO NOT** do this, if you've already pushed said commits (at least not without coordination with others who may have pulled those commis).  Note that this is quite different from *git revert*, which applies a reversed patch as an additional commit.
 
 Listing changes in your working dir, in diff format
 ---------------------------------------------------
@@ -138,13 +138,13 @@ Make desired branch current in working directory::
 
 Create a new branch from master, and make it current::
 
-	$ git checkout -b my-new-branch-name master
+	$ git checkout -b alternate-theme master
 
 Examine which branch is current::
 
 	$ git status
 
-('git branch' also shows you the current branch, using a "*" to indicate this)
+('git branch' also shows you the current branch, using a "*" in front)
 
 Obtain a diff between current branch, and master branch
 -------------------------------------------------------
@@ -166,7 +166,7 @@ Rather than full changeset descriptions, obtain a one-line summary of each chang
 Merging changes from one branch to another
 ------------------------------------------
 
-Suppose that you do work on branch A and branch B, and after work on those two branches is complete, you merge the work into mainline branch M::
+Suppose that you do work on two different branches, and after work on those two branches is complete, you merge the work into master::
 
 	$ git checkout master	# switch to branch master
 	$ git merge drafts		# merge drafts into master
@@ -180,7 +180,7 @@ Optimize your repository
 
 git is heavily optimized for fast storage and retrieval on a per-command basis. However, over a long period of time, it can be useful to perform further optimizations, including packing all git objects into single "packfile" for fast retrieval and less wasted disk space.  The following::
 
-	$ cd package-name
+	$ cd <dir>
 	$ git gc
 
 will optimize your repository.  You don't need to run this frequently — git is quite fast even without it.  See the 'git gc' man page for more details.
@@ -188,22 +188,22 @@ will optimize your repository.  You don't need to run this frequently — git is
 Don't forget to download tags from time to time
 -----------------------------------------------
 
-git pull only downloads SHA1-indexed object data, and the requested remote head.  This misses updates to the .git/refs/tags/ and .git/refs/heads/ directories.  For tags, run git fetch --tags in your local repo.
+Doing a "git pull" only downloads new commits from the remote, and updates the requested remote head.  This misses updates to the .git/refs/tags/ and .git/refs/heads/ directories.  For tags, run git fetch --tags in your local repo.
 
 Tagging a particular commit
 ---------------------------
 
 In many cases, you will want to give interesting or significant commits a name, known as a tag.  The Linux kernel uses tags for each kernel version: "v2.6.21", "v2.6.22", etc.  For example, to create a new tag after a particular commit::
 
-	$ cd package-name
+	$ cd <dir>
 	$ git tag my-tag
 
-This creates a new tag named "my-tag", based on the current commit. You will probably do a lot more with tagging, including GPG-signing, so read the man page for more details.
+This creates a new tag named "my-tag", based on the current commit. You can also make an "annotated" tag, or a GPG-signed tag, so read the man page for more details.
 
 Further reading
 ---------------
 
-Another good introduction is the `Git tutorial`_
+A (larger) good introduction is the `Git tutorial`_
 
 .. _Git tutorial: http://schacon.github.com/git/gittutorial.html
 
@@ -213,7 +213,12 @@ More complete documentation is available in the `Git community book`_, as well a
 
 .. _Git Reference: http://gitref.org/
 
-And for even more detailed information on Git, check out `the Pro Git book`_.
+And for even more information on Git, check out `the Pro Git book`_.
 
 .. _the Pro Git book: http://progit.org/book/
 
+
+
+.. admonition:: Note
+
+   This article was originally adapted and expanded from another Git Intro found on the web; I just can't remember where :/
