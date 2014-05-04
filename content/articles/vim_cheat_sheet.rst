@@ -139,9 +139,10 @@ USEFUL SET OPTIONS
 
 ::
 
+ enable paste mode (turn off default settings that make pasting act weird) :set paste
  show command being constructed :set showcmd
  show cursor line & column :set ruler
  number lines :set number
  ignore case on searches :set ignorecase (or "ic")
  automatically break long lines :set textwidth=80 (or "tw")
- convert from dos format :set fileformat=unix (then save the file)
+ convert from dos line-endings :set fileformat=unix (then save the file)
