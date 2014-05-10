@@ -97,6 +97,7 @@ Adapted based on these: http://hackercodex.com/guide/python-development-environm
   * Info at: http://brew.sh
 
   * Executive summary: run this at shell prompt:
+
     $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 * install Python
