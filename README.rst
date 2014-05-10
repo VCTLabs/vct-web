@@ -87,6 +87,11 @@ in the index.rst file for tweaking the layout and/or text formatting.  The
 alternative is tweaking the theme itself (templates, static css) which I'll
 leave as an exercise for the reader...
 
+OS X instructions
++++++++++++++++++
+
+* http://hackercodex.com/guide/python-development-environment-on-mac-osx/
+
 ReStructuredText references
 +++++++++++++++++++++++++++
 
