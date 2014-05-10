@@ -96,52 +96,49 @@ Adapted based on these: http://hackercodex.com/guide/python-development-environm
 
   * Info at: http://brew.sh
 
-  * Executive summary: run this at shell prompt:
+  * Executive summary: run this at shell prompt::
 
     $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-* install Python
+* install Python::
 
-  * $ brew install python --with-brewed-openssl
+    $ brew install python --with-brewed-openssl
 
-* install git
+* install git::
 
-  * $ brew install git
+  $ brew install git
 
-* install virtualenv
+* install virtualenv::
 
-  * $ pip install virtualenv
+  $ pip install virtualenv
 
-* create a place to store your virtualenvs
+* create a place to store your virtualenvs::
 
-  * $ mkdir $HOME/virtualenv && cd $HOME/virtualenv
+    $ mkdir $HOME/virtualenv && cd $HOME/virtualenv
+    (or wherever you want to put it)
 
-* update bashrc
+* update bashrc::
 
-  * $ vim $HOME/.bashrc
+    $ cat >> $HOME/.bashrc
+    # pip should only run if there is a virtualenv currently activated
+    export PIP_REQUIRE_VIRTUALENV=true
+    # cache pip-installed packages to avoid re-downloading
+    export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+    (EOF)
+    $ . $HOME/.bashrc
 
-    +--------------------------------------------------------------------+
-    | # pip should only run if there is a virtualenv currently activated |
-    | export PIP_REQUIRE_VIRTUALENV=true                                 |
-    | # cache pip-installed packages to avoid re-downloading             |
-    | export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache                         |
-    +--------------------------------------------------------------------+
+* create a virtualenv for this::
 
-  * $ . $HOME/.bashrc
+  $ cd $HOME/virtualenv && virtualenv vct-web && cd vct-web && . bin/activate
 
-* create a virtualenv for this
+* install pelican within the virtualenv::
 
-  * $ cd $HOME/virtualenv && virtualenv vct-web && cd vct-web && . bin/activate
+  $ pip install pelican markdown ghp-import shovel typogrify
 
-* install pelican within the virtualenv
+* clone the vct-web repo::
 
-  * $ pip install pelican markdown ghp-import shovel typogrify
-
-* clone the vct-web repo
-
-  * $ git clone https://github.com/VCTLabs/vct-web.git
-
-  * $ cd vct-web && git clone --recursive https://github.com/getpelican/pelican-themes themes
+  $ git clone https://github.com/VCTLabs/vct-web.git
+  $ cd vct-web && git clone --recursive https://github.com/getpelican/pelican-themes themes
 
 ReStructuredText references
 +++++++++++++++++++++++++++
