@@ -93,32 +93,53 @@ OS X instructions
 Adapted based on these: http://hackercodex.com/guide/python-development-environment-on-mac-osx/
 
 * install Homebrew
+
   * Info at: http://brew.sh
+
   * Executive summary: run this at shell prompt:
     $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
 * install Python
+
   * $ brew install python --with-brewed-openssl
+
 * install git
+
   * $ brew install git
+
 * install virtualenv
+
   * $ pip install virtualenv
+
 * create a place to store your virtualenvs
+
   * $ mkdir $HOME/virtualenv && cd $HOME/virtualenv
+
 * update bashrc
+
   * $ vim $HOME/.bashrc
+
     +--------------------------------------------------------------------+
     | # pip should only run if there is a virtualenv currently activated |
     | export PIP_REQUIRE_VIRTUALENV=true                                 |
     | # cache pip-installed packages to avoid re-downloading             |
     | export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache                         |
     +--------------------------------------------------------------------+
+
   * $ . $HOME/.bashrc
+
 * create a virtualenv for this
+
   * $ cd $HOME/virtualenv && virtualenv vct-web && cd vct-web && . bin/activate
+
 * install pelican within the virtualenv
+
   * $ pip install pelican markdown ghp-import shovel typogrify
+
 * clone the vct-web repo
+
   * $ git clone https://github.com/VCTLabs/vct-web.git
+
   * $ cd vct-web && git clone --recursive https://github.com/getpelican/pelican-themes themes
 
 ReStructuredText references
