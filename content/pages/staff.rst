@@ -52,11 +52,6 @@ Homer Parker - Linux Distribution Maintenance/System Administration/Network Serv
 
 Homer is a long-time Gentoo Linux developer and system administrator specializing in Linux servers and related services.  He is well versed in all aspects of services required for ISP/hosting environments as well as Windows to Linux migrations, including SMTP, POP3, IMAP, HTTP, FTP, SSH, etc as well as Samba, NFS, and other services needed for a business environment.  Specialties include ISP/hosting services, shared hosting, VPS configuration and administration, and end-user support.
 
-Jerrid Kimball - Software Developer, full web stack, back-end to presentation layer
------------------------------------------------------------------------------------
-
-Jerrid focuses on building robust (preferably open-source) software by using strict programming languages, disciplined testing, and high-quality documentation. For nearly 15 years, he has been developing standards-based, web-enabled software using the latest technologies while gradually moving further down the stack to better create well-integrated solutions. From using the Ada language day-to-day with a small team since nearly 7 years, he brings the discipline enforced by it to all of his projects regardless of language, including an appreciation for planning and discussion. Jerrid has created and consumed a variety of inter-process communication APIs for the web using complex XML based markup down to lightweight JSON to create novel data-oriented desktop and mobile-capable applications. Jerrid is an advocate of open source software and open data and is a regular contributor to open source.
-
 Tom King - Analog and Digital Design, Telecommunications, Radar, Embedded Systems
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,10 +64,10 @@ His embedded projects include, for example, designing and implementing an Intern
 Crystal Lockwood - Graphic Design/Web Master
 --------------------------------------------
 
-Crystal Lockwood has worked in the field of graphic art and website design for over 10 years. Her web designs are enhanced by digital photography and custom graphics. She has a keen sense of color and design, and is known for careful attention to detail. In addition to web design, Crystal participates in product development and marketing by creating icons, product logos, and product illustrations. She also produces company logos, business cards, and letterheads. Crystal’s professional attitude and responsiveness to customer input make her a pleasure to work with. Crystal has a BA in Art from Westmont College.
+Crystal has worked in the field of graphic art and website design for over 10 years. Her web designs are enhanced by digital photography and custom graphics. She has a keen sense of color and design, and is known for careful attention to detail. In addition to web design, Crystal participates in product development and marketing by creating icons, product logos, and product illustrations. She also produces company logos, business cards, and letterheads. Crystal’s professional attitude and responsiveness to customer input make her a pleasure to work with. Crystal has a BA in Art from Westmont College.
 
 Hua Lee - Algorithms Consultant
 -------------------------------
 
-Hua Lee is a Professor at the Electrical and Computer Engineering department at  UCSB. His research interests cover the areas of imaging system optimization, high-performance image formation algorithms, synthetic-aperture radar and sonar systems, acoustic microscopy, microwave nondestructive evaluation, and dynamic vision systems. His research laboratory was the first to produce the holographic and tomographic reconstructions from a scanning laser acoustic microscope, and his research team is also known as the leader in pulse-echo microwave nondestructive evaluation of civil structures and materials.
+Hua is a Professor at the Electrical and Computer Engineering department at  UCSB. His research interests cover the areas of imaging system optimization, high-performance image formation algorithms, synthetic-aperture radar and sonar systems, acoustic microscopy, microwave nondestructive evaluation, and dynamic vision systems. His research laboratory was the first to produce the holographic and tomographic reconstructions from a scanning laser acoustic microscope, and his research team is also known as the leader in pulse-echo microwave nondestructive evaluation of civil structures and materials.
 
