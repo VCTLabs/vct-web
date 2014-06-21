@@ -45,9 +45,9 @@ Things to keep in mind:
 Running gprof
 -------------
 
-Run gprof like this:
+Run gprof like this::
 
-    ``$ gprof *program-name [ data-file ] [ > output-file ]*``
+    $ gprof program-name [ data-file ] [ > output-file ]
 
 If you don't specify the name of a data file, ``gmon.out`` is assumed.  Following the gprof command with "``> output-file``" causes the output of gprof to be saved to ``output-file`` so you can examine it later.
 
@@ -98,30 +98,29 @@ The call graph shows how much time was spent in each function and its children. 
 Here is some of the output from the call graph::
 
                              Call graph (explanation follows)
-
-
-        granularity: each sample hit covers 4 byte(s) for 2.50% of 0.40 seconds
-
-        index % time    self  children    called     name
-                        0.02    0.15      12/12          main [2]
-        [1]     42.5    0.02    0.15      12         Life::update(void) [1]
-                        0.15    0.00   48000/48000       Life::neighbor_count(int, int) [4]
-        -----------------------------------------------
-                        0.00    0.17       1/1           _start [3]
-        [2]     42.5    0.00    0.17       1         main [2]
-                        0.02    0.15      12/12          Life::update(void) [1]
-                        0.00    0.00      12/12          Life::print(void) [13]
-                        0.00    0.00      12/12          to_continue(void) [14]
-                        0.00    0.00       1/1           instructions(void) [16]
-                        0.00    0.00       1/1           Life::initialize(void) [15]
-        -----------------------------------------------
-
-        [3]     42.5    0.00    0.17                 _start [3]
-                        0.00    0.17       1/1           main [2]
-        -----------------------------------------------
-                        0.15    0.00   48000/48000       Life::update(void) [1]
-        [4]     37.5    0.15    0.00   48000         Life::neighbor_count(int, int) [4]
-        -----------------------------------------------
+    
+    granularity: each sample hit covers 4 byte(s) for 2.50% of 0.40 seconds
+    
+    index % time    self  children    called     name
+                    0.02    0.15      12/12      main [2]
+    [1]     42.5    0.02    0.15      12         Life::update(void) [1]
+                    0.15    0.00   48000/48000   Life::neighbor_count(int, int) [4]
+    ---------------------------------------------------------------------------
+                    0.00    0.17       1/1       _start [3]
+    [2]     42.5    0.00    0.17       1         main [2]
+                    0.02    0.15      12/12      Life::update(void) [1]
+                    0.00    0.00      12/12      Life::print(void) [13]
+                    0.00    0.00      12/12      to_continue(void) [14]
+                    0.00    0.00       1/1       instructions(void) [16]
+                    0.00    0.00       1/1       Life::initialize(void) [15]
+    ---------------------------------------------------------------------------
+    
+    [3]     42.5    0.00    0.17                 _start [3]
+                    0.00    0.17       1/1       main [2]
+    ---------------------------------------------------------------------------
+                    0.15    0.00   48000/48000   Life::update(void) [1]
+    [4]     37.5    0.15    0.00   48000         Life::neighbor_count(int, int) [4]
+    ---------------------------------------------------------------------------
 
 The lines full of dashes divide this table into *entries*, one for each function. Each entry has one or more lines.
 
