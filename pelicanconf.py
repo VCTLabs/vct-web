@@ -29,7 +29,8 @@ REVERSE_CATEGORY_ORDER = False
 #TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Gentoo Linux', 'http://www.gentoo.org'),
+LINKS =  (('Understanding Risk', 'https://www.understandrisk.org/'),
+          ('Gentoo Linux', 'http://www.gentoo.org'),
           ('Yocto Project', 'https://www.yoctoproject.org/'),
           ('SELinux', 'http://selinuxproject.org/page/Main_Page'),
           ('Python.org', 'http://python.org/'),
