@@ -2,15 +2,18 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'VCT Labs'
+##AUTHOR = u'VCT Labs'
 SITENAME = u'VCT Labs'
-HIDE_SITENAME = True
+HIDE_SITENAME = (True)
 SITEURL = 'http://www.vctlabs.com'
 SITELOGO = 'images/logo.png'
 SITELOGO_SIZE = '60'
 FAVICON = 'images/favicon.png'
 
 TIMEZONE = 'PST8PDT'
+
+SHOW_ARTICLE_AUTHOR = (True)
+SHOW_ARTICLE_CATEGORY = (True)
 
 DEFAULT_LANG = u'en'
 DATE_FORMAT = {
@@ -20,8 +23,8 @@ DATE_FORMAT = {
 WEBASSETS = (True)
 TYPOGRIFY = (True)
 
-PDF_GENERATOR = False
-REVERSE_CATEGORY_ORDER = False
+PDF_GENERATOR = (False)
+REVERSE_CATEGORY_ORDER = (False)
 
 # Feed generation is usually not desired when developing
 #FEED_ALL_ATOM = None
@@ -45,7 +48,7 @@ LINKS =  (('Understanding Risk', 'https://www.understandrisk.org/'),
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = (True)
 
 THEME = 'themes/pelican-bootstrap3'
 OUTPUT_PATH = 'output'
@@ -75,6 +78,10 @@ DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 
 #RECENT_POST_COUNT
+
+AUTHORS_SAVE_AS = 'authors.html'
+AUTHOR_URL = 'author/{slug}.html'
+AUTHOR_SAVE_AS = 'author/{slug}.html'
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'

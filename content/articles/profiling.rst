@@ -3,7 +3,7 @@ Dos and Don'ts for profiling and performance optimization
 =========================================================
 
 :date: 2014-04-17
-:author: Steve Arnold
+:author: Stephen Arnold
 :tags: profiling, software testing, software performance, gprof, gcc
 :category: programming
 :slug: profiling-with-grof

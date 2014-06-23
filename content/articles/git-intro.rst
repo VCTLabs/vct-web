@@ -3,7 +3,7 @@ Yet Another Git Intro: A basic introduction with command-line examples
 ======================================================================
 
 :date: 2014-05-03
-:author: Steve Arnold
+:author: Stephen Arnold
 :tags: source code, source code repository, software configuration management, git
 :category: programming
 :slug: git-intro

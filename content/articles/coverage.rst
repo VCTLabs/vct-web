@@ -3,7 +3,7 @@ Dos and Don'ts for generating code/test coverage data (for C, C++, Java, and Pyt
 ====================================================================================
 
 :date: 2014-04-03
-:author: Steve Arnold
+:author: Stephen Arnold
 :tags: code coverage, test coverage, software testing, gcov, gcc
 :category: programming
 :slug: coverage-with-gcov

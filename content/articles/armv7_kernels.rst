@@ -3,7 +3,7 @@ ARMv7 3.15.0 Kernel and U-Boot Images for Gentoo / Other Linux
 ##############################################################
 
 :date: 2014-06-18
-:author: Stephen L Arnold
+:author: Stephen Arnold
 :tags: kernel, u-boot, rootfs, Gentoo, Debian, Wandboard, Udoo, BeagleBoneBlack
 :category: news
 :slug: armv7_kernels
