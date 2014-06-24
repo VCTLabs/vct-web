@@ -10,7 +10,7 @@ ARMv7 3.15.0 Kernel and U-Boot Images for Gentoo / Other Linux
 :summary: 3.15.0 ARMv7 kernel and u-boot images now available
 
 ARMv7 Linux kernel (3.15.0) and U-Boot (2014.07-rc3) images are available 
-for use, built from the 'github repos'_ of Robert C Nelson, the current 
+for use, built from the `github repos`_ of Robert C Nelson, the current 
 upstream maintainer of several board-specifc kernel patch sets, u-boot 
 patches, custom build scripts, and eewiki docs.
 
