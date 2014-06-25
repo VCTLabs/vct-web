@@ -7,7 +7,7 @@ SITENAME = u'VCT Labs'
 HIDE_SITENAME = (True)
 SITEURL = 'http://www.vctlabs.com'
 SITELOGO = 'images/logo.png'
-SITELOGO_SIZE = '60'
+SITELOGO_SIZE = '48'
 FAVICON = 'images/favicon.png'
 
 TIMEZONE = 'PST8PDT'
@@ -59,8 +59,9 @@ PLUGIN_PATH = 'plugins'
 #DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
 #DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
-# Tell Pelican to add 'powerpc' to the output dir
-STATIC_PATHS = ['images', 'powerpc']
+CUSTOM_CSS = 'css/custom.css'
+STATIC_PATHS = ['images', 'css/custom.css']
+#STATIC_PATHS = ['images', 'powerpc']
 
 # theme settings for pelican-bootstrap3
 CC_LICENSE_DERIVATIVES = "ShareAlike"
