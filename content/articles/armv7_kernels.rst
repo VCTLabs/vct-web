@@ -121,10 +121,11 @@ strictly required to reformat the card each time, depending on what
 your needs are, ie, you can preserve an existing rootfs and manually 
 update the bootloader and/or kernel as needed.
 
-If the card seems slow when running, then check top and loof for a piggy 
-process.  Some cards feel faster/slower depending on how they're formatted, 
+If the card seems slow when running, then check top and look for a piggy 
+process (sometimes the mmc driver can be seen taking up too much cpu)..
+Some cards can feel faster or slower depending on how they're formatted, 
 so feel free to test some of the recommended formatting options (although 
-the partition allignment should be fine with default fdisk, whether or not 
+the partition allignment should be fine with default fdisk; whether or not 
 you want ext4 to use a journal and setting a specific stride option is up 
 to personal choice).
 
@@ -134,7 +135,6 @@ and/or tmpfs device for /tmp if you have enough physical RAM.  The latter
 options actually help quite a lot for general performance and on most compile 
 jobs, but make sure your parallel make setting isn't too high when you compile 
 things like binutils/gcc/glibc, and especially webkit-gtk and firefox...
-
 
 
 .. _github repos: https://github.com/RobertCNelson?tab=repositories
