@@ -1,6 +1,6 @@
 Title: Do-It-Yourself Home Automation with the Belkin WeMo
 Date: 2014-07-13 12:40
-Tags: home automation, ha, scripting, belkin, wemo
+Tags: home automation, ha, scripting, belkin, wemo, automation, ifttt
 Category: howto
 Slug: home-automation
 Author: Donald Burr
@@ -27,6 +27,8 @@ First you will need to buy a WeMo switch.  They are [available on Amazon][WEMO] 
 You'll want to assign your WeMos static IP addresses, since you always want to be able to reach them, and with dynamic IP addresses there is a chance that the WeMo might get assigned a different IP address sometimes.  The problem is that WeMo devices *don't* support assigning static IP addresses - they always pick up their IP addresses using DHCP.  Fortunately, most home routers these days have the capability to assign static IP addresses to a given device based on its MAC address.  (Look for a menu option in your router labeled "Static DHCP" or "Reservation DHCP" or something similar.)  Then enter your WeMo's MAC address, and give it a static IP.  Once the router has updated its configuration, you can plug in the WeMo.
 
 Next you will need an iOS or Android smartphone or tablet.  At this time the only way to perform initial setup on the WeMo (give it a name,  tell it how to connect to your WiFi network, etc.) is by using the WeMo app for [iOS][WEMO-IOS] or [Android][WEMO-ANDROID].  (The app is free.)  Once the initial setup is complete, you can control the WeMo from any Linux computer.  If you don't have a smartphone or tablet, you can just borrow a friend's to perform the initial setup.  You may want to consider getting one though; as I mentioned earlier, they make excellent HA controllers, plus they have many other uses as well.  Decent Android tablets can be had for $150-200 nowadays, and used iOS devices aren't that much more.  (If you are willing to set up a separate *unencrypted* network for use exclusively by your WeMo devices, [there is a way][WWS] to set up the WeMo without the aid of a smartphone or tablet.  This dedicated network need not be connected to the Internet or your home network, but any computers that you want to be able to control your WeMos must be able to connect to it.  I would wager that this is something most people won't want to do, so my advice to you is just borrow a smartphone/tablet or consider getting one.)
+
+Access your mobile device's WiFi settings screen.  You should see a new WiFi access point named `"WeMo-*some random alphanumeric characters."` Connect to it, then launch the WeMo app.  It will guide you through the setup procedure, which includes assigning the WeMo a "friendly name" (a name to easily identify this particular WeMo) and connecting it to your WiFi network.  Once that's complete, go back to your mobile device's WiFi screen and reconnect to your usual WiFi network.  If all is well, then when you next run the WeMo app, your new WeMo should appear on screen.
 
 (By the way, as you run the setup procedure, the app will probably inform you that a firmware update is available for your new WeMo.  It would be wise to install these whenever they come out, as they are always coming out with bug fixes and improvements.  This is another reason why you should have a smartphone/tablet and the WeMo app; it is the only way that you can run firmware updates.)
 
