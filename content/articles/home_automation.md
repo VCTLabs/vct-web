@@ -104,7 +104,7 @@ Home Automation is not only useful, it's just plain *fun*.  And, thanks to a ple
 [WEMO-BELKIN-PAGE]: http://www.belkin.com/us/Products/home-automation/c/wemo-home-automation/ "Belkin's WeMo page"
 [WEMO-SWITCH]: http://www.belkin.com/us/p/P-F7C027/ "WeMo Switch"
 [WEMO]: http://www.amazon.com/dp/B00BB2MMNE/?tag=otakunocast-20 "WeMo device"
-[WEMO-IOS]: https://itunes.apple.com/us/app/wemo/id511376996?mt=8 "WeMo App for iOS"
+[WEMO-IOS]: https://itunes.apple.com/us/app/wemo/id511376996?mt=8&at=10lrq4 "WeMo App for iOS"
 [WEMO-ANDROID]: https://play.google.com/store/apps/details?id=com.belkin.wemoandroid&hl=en "WeMo App for Android"
 [WEMO-PERL]: https://github.com/ericblue/Perl-Belkin-WeMo-API "Perl-Belkin-WeMo-API"
 [OUIMEAUX]: https://github.com/iancmcc/ouimeaux "Ouimeaux"
