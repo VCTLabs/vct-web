@@ -18,4 +18,4 @@ also get released without this fix. Here is a copy of the patch for those
 who wish to apply it manually to an affected kernel (3.15, and possibly 3.16): liblockdep-fix-regression.patch_
 
 .. _pull the fix from Sasha Levin: https://lkml.org/lkml/2014/7/7/465
-.. _liblockdep-fix-regression.patch: ../downloads/liblockdep-fix-regression.patch
+.. _liblockdep-fix-regression.patch: /downloads/liblockdep-fix-regression.patch
