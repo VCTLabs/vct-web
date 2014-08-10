@@ -190,28 +190,29 @@ so type of linking can be decided based on needs of the project.
 
 Static library
 
-  * need to use the static version if application under test is statically linked
+* need to use the static version if application under test is statically linked
 
-  * watch out for licensing issues -- can only ship apps with builtin liblockdep
-    if all the source is GPLv2 compatible (fine to use liblockdep in local 
-    test builds with any source though, just can't release to users if non-GPL)
+* watch out for licensing issues -- can only ship apps with builtin liblockdep
+  if all the source is GPLv2 compatible (fine to use liblockdep in local 
+  test builds with any source though, just can't release to users if non-GPL)
 
-  * run application normally, no changes to command line
+* run application normally, no changes to command line
 
 Shared library
 
-  * application under test must be dynamically linked to libpthread
+* application under test must be dynamically linked to libpthread
 
-  * use LD_PRELOAD to allow liblockdep to override pthread locking functions
+* use LD_PRELOAD on command line to allow liblockdep to override pthread 
+  locking functions ::
 
     LD_PRELOAD=/usr/src/linux/tools/lib/lockdep/liblockdep.so some_thready_application
 
 Tips common to both styles of linking
 
-  * liblockdep traces currently go to stdout, so make sure stdout is not closed
+* liblockdep traces currently go to stdout, so make sure stdout is not closed
 
-  * stack traces in output are improved if application is built with -rdynamic
-    (functions will be listed instead of just addresses)
+* stack traces in output are improved if application is built with -rdynamic
+  (functions will be listed instead of just addresses)
 
-  * like compiler errors, focus on fixing first complaint from the output, 
-    since single error can cascade to generate multiple complaints
+* like compiler errors, focus on fixing first complaint from the output, 
+  since single error can cascade to generate multiple complaints
