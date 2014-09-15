@@ -5,7 +5,7 @@ Maintaining Your Stock BeagleBone Angstrom Images and Demos
 :date: 2014-09-14
 :author: Stephen Arnold
 :tags: kernel, u-boot, Gentoo, Angstrom, BeagleBone, bonescript
-:category: howtos
+:category: howto
 :slug: beaglebone_images
 :summary: Update or fix your BeagleBone Angstrom install
 
