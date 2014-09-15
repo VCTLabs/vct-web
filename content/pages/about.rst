@@ -27,10 +27,11 @@ VCT Labs specializes in the application of Open Source technology to real-world
 problems.  The dedication of many staff members to open technology extends
 beyond their professional duties to their personal time.  Our software
 engineers go home and run Linux and other Open Source software on our personal
-computers.  Several core members, including the president, of our local Linux User Group 
-are members of VCT engineering staff.  VCT engineers participate as
-members of Open Source projects.  Hardware-related personal projects 
-include using FPGAs and arduinos for electrical monitoring of old (we like
-to say "classic") cars from before the era of on-board computers, or
-participating in the RepRap 3-D printing community.
+computers.  Several core members, including the president of our local Linux User
+Group are members of VCT engineering staff.  VCT engineers participate as
+developers and user support on Open Source projects such as Gentoo Linux and
+Openembedded.  Hardware-related personal projects include using FPGAs and
+arduinos for electrical monitoring of old (we like to say "classic") cars
+from before the era of on-board computers, or participating in the RepRap
+3-D printing community.
 
