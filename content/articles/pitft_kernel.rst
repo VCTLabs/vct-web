@@ -38,12 +38,12 @@ If you'd rather do things by hand and/or leave things largely unmodified, then y
     $ sudo mount /boot  # make sure /boot is mounted
     $ git clone https://github.com/adafruit/rpi-firmware.git
     $ sudo cp /boot/kernel.img kernel.bak
-    $ cd firmware
+    $ cd rpi-firmware
     $ sudo cp -v boot/* /boot/
     $ sudo cp -v extra/Module.symvers /boot/
     $ sudo cp -av modules/3.15.8+ /lib/modules/
 
-Depending on your actual hardware, the above kernel config maybe missing the correct config to work with the modules and options documented in the Adafruit guide.  If the latest Adafruit kernel does not load the fbtft_device module correctly, then download and unpack the .deb packages in the script and manually install the 3.12.x kernel using the above process.
+Depending on your actual hardware, the above kernel config may be missing the correct config to work with the modules and options documented in the Adafruit guide.  If the latest Adafruit kernel does not load the fbtft_device module correctly, then download and unpack the .deb packages in the script and manually install the 3.12.x kernel using the above process.
 
 At some point later you can update your userland (vcgraphics) software as well, but for now we only need to test the kernel and display.  This may very well suffice for your needs, so feel free to stop here and finish the config manually (or maybe go back and run the install script).  The rest of this document is mainly for building your own custom kernel; if that's what you want to do keep reading...
 
