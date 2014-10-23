@@ -12,7 +12,7 @@ Maintaining Your Stock BeagleBone Angstrom Images and Demos
 In a previous news article, we described building and deploying the latest U-boot
 and Linux kernels on several armv7 machines, `including a BeagleBoneBlack`_.
 
-.. _including a BeagleBoneBlack: armv7_kernels.rst
+.. _including a BeagleBoneBlack: /posts/2014/Jun/18/armv7_kernels/
 
 In this "HOWTO" we'll talk about restoring/upgrading/maintaining your stock
 Angstrom install on both BeagleBone White and Black.  Why would we do this?
