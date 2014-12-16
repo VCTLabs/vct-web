@@ -60,7 +60,7 @@ PLUGIN_PATH = 'plugins'
 #DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
 CUSTOM_CSS = 'css/custom.css'
-STATIC_PATHS = ['images', 'css/custom.css']
+STATIC_PATHS = ['images', 'css/custom.css', 'downloads']
 #STATIC_PATHS = ['images', 'powerpc']
 
 # theme settings for pelican-bootstrap3

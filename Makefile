@@ -12,7 +12,7 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=localhost
+SSH_HOST=dent.vctlabs.com
 SSH_PORT=22
 SSH_USER=sarnold
 SSH_TARGET_DIR=/var/www

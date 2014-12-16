@@ -1,0 +1,153 @@
+commit b10827814e9c81c5a14fb73c5a6e06bd85df3f94
+Author: S. Lockwood-Childs <sjl@dent.vctlabs.com>
+Date:   Mon Jul 7 00:17:33 2014 -0700
+
+    tools/liblockdep: Account for bitfield changes in lockdeps lock_acquire
+    
+    Commit fb9edbe984 shortened held_lock->check from a 2-bit field
+    to a 1-bit field.
+    
+    Make liblockdep compatible with the new definition by passing check=1
+    to lock_acquire() calls, rather than the old value check=2 (which
+    inadvertently disabled checks by overflowing to 0).
+    
+    Without this fix, several of the test cases in liblockdep run_tests.sh
+    were failing.
+    
+    Signed-off-by: S. Lockwood-Childs <sjl@vctlabs.com>
+    Signed-off-by: Sasha Levin <sasha.levin@oracle.com>
+
+diff --git a/tools/lib/lockdep/include/liblockdep/mutex.h b/tools/lib/lockdep/include/liblockdep/mutex.h
+index c342f70..ee53a42 100644
+--- a/tools/lib/lockdep/include/liblockdep/mutex.h
++++ b/tools/lib/lockdep/include/liblockdep/mutex.h
+@@ -35,7 +35,7 @@ static inline int __mutex_init(liblockdep_pthread_mutex_t *lock,
+ 
+ static inline int liblockdep_pthread_mutex_lock(liblockdep_pthread_mutex_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 0, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 0, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_mutex_lock(&lock->mutex);
+ }
+ 
+@@ -47,7 +47,7 @@ static inline int liblockdep_pthread_mutex_unlock(liblockdep_pthread_mutex_t *lo
+ 
+ static inline int liblockdep_pthread_mutex_trylock(liblockdep_pthread_mutex_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 1, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 1, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_mutex_trylock(&lock->mutex) == 0 ? 1 : 0;
+ }
+ 
+diff --git a/tools/lib/lockdep/include/liblockdep/rwlock.h b/tools/lib/lockdep/include/liblockdep/rwlock.h
+index a680ab8..4ec03f8 100644
+--- a/tools/lib/lockdep/include/liblockdep/rwlock.h
++++ b/tools/lib/lockdep/include/liblockdep/rwlock.h
+@@ -36,7 +36,7 @@ static inline int __rwlock_init(liblockdep_pthread_rwlock_t *lock,
+ 
+ static inline int liblockdep_pthread_rwlock_rdlock(liblockdep_pthread_rwlock_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 0, 2, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 0, 2, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_rwlock_rdlock(&lock->rwlock);
+ 
+ }
+@@ -49,19 +49,19 @@ static inline int liblockdep_pthread_rwlock_unlock(liblockdep_pthread_rwlock_t *
+ 
+ static inline int liblockdep_pthread_rwlock_wrlock(liblockdep_pthread_rwlock_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 0, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 0, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_rwlock_wrlock(&lock->rwlock);
+ }
+ 
+ static inline int liblockdep_pthread_rwlock_tryrdlock(liblockdep_pthread_rwlock_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 1, 2, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 1, 2, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_rwlock_tryrdlock(&lock->rwlock) == 0 ? 1 : 0;
+ }
+ 
+ static inline int liblockdep_pthread_rwlock_trywlock(liblockdep_pthread_rwlock_t *lock)
+ {
+-	lock_acquire(&lock->dep_map, 0, 1, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&lock->dep_map, 0, 1, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	return pthread_rwlock_trywlock(&lock->rwlock) == 0 ? 1 : 0;
+ }
+ 
+diff --git a/tools/lib/lockdep/preload.c b/tools/lib/lockdep/preload.c
+index 51ec2ec8..6f80360 100644
+--- a/tools/lib/lockdep/preload.c
++++ b/tools/lib/lockdep/preload.c
+@@ -252,7 +252,7 @@ int pthread_mutex_lock(pthread_mutex_t *mutex)
+ 
+ 	try_init_preload();
+ 
+-	lock_acquire(&__get_lock(mutex)->dep_map, 0, 0, 0, 2, NULL,
++	lock_acquire(&__get_lock(mutex)->dep_map, 0, 0, 0, 1, NULL,
+ 			(unsigned long)_RET_IP_);
+ 	/*
+ 	 * Here's the thing with pthread mutexes: unlike the kernel variant,
+@@ -281,7 +281,7 @@ int pthread_mutex_trylock(pthread_mutex_t *mutex)
+ 
+ 	try_init_preload();
+ 
+-	lock_acquire(&__get_lock(mutex)->dep_map, 0, 1, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&__get_lock(mutex)->dep_map, 0, 1, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_mutex_trylock(mutex);
+ 	if (r)
+ 		lock_release(&__get_lock(mutex)->dep_map, 0, (unsigned long)_RET_IP_);
+@@ -303,7 +303,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex)
+ 	 */
+ 	r = ll_pthread_mutex_unlock(mutex);
+ 	if (r)
+-		lock_acquire(&__get_lock(mutex)->dep_map, 0, 0, 0, 2, NULL, (unsigned long)_RET_IP_);
++		lock_acquire(&__get_lock(mutex)->dep_map, 0, 0, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 
+ 	return r;
+ }
+@@ -352,7 +352,7 @@ int pthread_rwlock_rdlock(pthread_rwlock_t *rwlock)
+ 
+         init_preload();
+ 
+-	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 2, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 2, 1, NULL, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_rwlock_rdlock(rwlock);
+ 	if (r)
+ 		lock_release(&__get_lock(rwlock)->dep_map, 0, (unsigned long)_RET_IP_);
+@@ -366,7 +366,7 @@ int pthread_rwlock_tryrdlock(pthread_rwlock_t *rwlock)
+ 
+         init_preload();
+ 
+-	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 1, 2, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 1, 2, 1, NULL, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_rwlock_tryrdlock(rwlock);
+ 	if (r)
+ 		lock_release(&__get_lock(rwlock)->dep_map, 0, (unsigned long)_RET_IP_);
+@@ -380,7 +380,7 @@ int pthread_rwlock_trywrlock(pthread_rwlock_t *rwlock)
+ 
+         init_preload();
+ 
+-	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 1, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 1, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_rwlock_trywrlock(rwlock);
+ 	if (r)
+                 lock_release(&__get_lock(rwlock)->dep_map, 0, (unsigned long)_RET_IP_);
+@@ -394,7 +394,7 @@ int pthread_rwlock_wrlock(pthread_rwlock_t *rwlock)
+ 
+         init_preload();
+ 
+-	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 0, 2, NULL, (unsigned long)_RET_IP_);
++	lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_rwlock_wrlock(rwlock);
+ 	if (r)
+ 		lock_release(&__get_lock(rwlock)->dep_map, 0, (unsigned long)_RET_IP_);
+@@ -411,7 +411,7 @@ int pthread_rwlock_unlock(pthread_rwlock_t *rwlock)
+ 	lock_release(&__get_lock(rwlock)->dep_map, 0, (unsigned long)_RET_IP_);
+ 	r = ll_pthread_rwlock_unlock(rwlock);
+ 	if (r)
+-		lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 0, 2, NULL, (unsigned long)_RET_IP_);
++		lock_acquire(&__get_lock(rwlock)->dep_map, 0, 0, 0, 1, NULL, (unsigned long)_RET_IP_);
+ 
+ 	return r;
+ }
