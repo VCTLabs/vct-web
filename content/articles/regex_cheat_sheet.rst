@@ -66,8 +66,8 @@ Reasons for grouping with parenthesis:
 Tips
 ====
 
-Convenient testing
-------------------
+Convenient testing from the command-line
+----------------------------------------
 
 Use *--colour* option of *egrep* or *grep* to do testing with a candidate pattern
 
@@ -86,6 +86,16 @@ syntax and test with *grep* if needed
 
   # matches "product ID 4234A"
   echo "quantity 5: product ID 4234A-Z99" | grep --colour "\(product ID [0-9]\+\)\+A"
+
+
+Convenient testing from a browser
+---------------------------------
+
+A very friendly web app for interactive experiments with regular expressions:
+small text box for the regex, large text box for the text to be matched,
+and highlighting that shows all matches in real-time
+
+http://regexr.com/
 
 Watch out for "*" vs "+"
 ------------------------
