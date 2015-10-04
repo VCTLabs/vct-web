@@ -49,13 +49,13 @@ Trace everything:
 
 ::
 
-  $ python -m --trace <script>
+  $ python -m trace --trace <script>
 
 Trace except for standard library modules:
 
 ::
 
-  $ python -m --trace --ignore-dir=/usr/lib/python<py-version> <script> 
+  $ python -m trace --trace --ignore-dir=/usr/lib/python<py-version> <script> 
 
 where <py-version> is python version from 'python --version' minus the
 trailing patch level, e.g. 2.7 or 3.2 rather than 2.7.4 or 3.2.2
@@ -64,7 +64,7 @@ Trace except for specific modules:
 
 ::
 
-  $ python -m --trace --ignore-module=<module 1> --ignore-module=<module 2> <script> 
+  $ python -m trace --trace --ignore-module=<module 1> --ignore-module=<module 2> <script> 
 
 Tracing ruby scripts
 --------------------
