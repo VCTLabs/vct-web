@@ -97,15 +97,15 @@ Note that these are consecutive, but the first 2 pins are skipped and the
 RX/TX order is opposite of boards that are compatible with FTDI serial cables,
 e.g. Minnowboard or BBB
 
-iMX233 OLinuXino
-----------------
+iMX233 OLinuXino Maxi/Mini
+--------------------------
 
 Serial port is single-row 4-pin connector U_DEBUG
 
 Schematic: https://github.com/OLIMEX/OLINUXINO/tree/master/HARDWARE
 
 Numbering below starts from the left while holding board with reset and
-power switches along bottom edge, so Pin 1 is closest to board edge
+power switches along top edge, so Pin 1 is closest to board edge
 
 =====  =======  ==============
 Pin #  Role     Adafruit color
