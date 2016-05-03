@@ -23,16 +23,24 @@ Phone
 
  (805) 683-3503
 
-Address
-+++++++
+Mailing Address
++++++++++++++++
 
 ::
 
  Vanguard Computer Technology Labs, Inc.
- 5951 Encina Rd.  #107
+ 81 David Love Pl.  #100
  Goleta, CA 93117
 
+Physical Address
+++++++++++++++++
 
-Location_ (Google Maps)
+::
 
-.. _Location: http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=5951+encina+rd+goleta&ie=UTF8&hq=&hnear=5951+Encina+Rd,+Goleta,+Santa+Barbara,+California+93117&ll=34.442522,-119.826014&spn=0.008406,0.019248&t=h&z=16
+ Vanguard Computer Technology Labs, Inc.
+ 81 David Love Pl.  #212
+ Goleta, CA 93117
+
+Map_ (Google Maps)
+
+.. _Map: https://www.google.com/maps/place/81+David+Love+Pl,+Goleta,+CA+93117
