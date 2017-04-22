@@ -42,16 +42,6 @@ Noel Lockwood - Database/Software Applications/Technical Writing
 
 Noel is a senior software engineer with over 30 years experience in a wide variety of languages, platforms, and applications for numerous defense and commercial projects. He is also a skilled technical writer and editor. He has strong experience in the areas of scientific, database, and embedded application programming. He enjoys learning new languages (both human and computer), and has programmed in a large number of languages including C, C++, Java, Fortran, Cobol, Basic, Prolog, Python, Perl, Unix shell, SQL, PL/SQL, SAS, and various assembly languages. He is a long-time Linux user, and a founding member of the Santa Barbara Linux Users Group who gives presentations on topics such as perl, python, and databases with Linux support. Noel is a graduate of UCLA in mathematics.
 
-Glenn Zickert - Software Applications Design and Implementation/Technical Writing
----------------------------------------------------------------------------------
-
-Glenn is a senior software engineer with over 25 years of experience in a wide variety of languages, platforms and applications for defense contractors.  He is a skilled technical writer and educator.  His experience spans from teaching under-graduate computer science to designing and implementing programs for DoD contractors.  He has designed, implemented and maintained programs using the C, C++, Java, Fortran and Ada programming languages, as well as Unix/Linux shell scripts.  Glenn has experience with the QT graphical user interface (GUI) and the Adaptive Communication Environment (ACE) and The Ace Orb (TAO) Corba interface.  Glenn holds a Bachelor of Science and a Master of Science in Computer Science from Chapman University.
-
-Homer Parker - Linux Distribution Maintenance/System Administration/Network Services
-------------------------------------------------------------------------------------
-
-Homer is a long-time Gentoo Linux developer and system administrator specializing in Linux servers and related services.  He is well versed in all aspects of services required for ISP/hosting environments as well as Windows to Linux migrations, including SMTP, POP3, IMAP, HTTP, FTP, SSH, etc as well as Samba, NFS, and other services needed for a business environment.  Specialties include ISP/hosting services, shared hosting, VPS configuration and administration, and end-user support.
-
 Tom King - Analog and Digital Design, Telecommunications, Radar, Embedded Systems
 ----------------------------------------------------------------------------------------------------------------------------------------
 
