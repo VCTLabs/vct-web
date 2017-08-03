@@ -30,7 +30,7 @@ Mailing Address
 
  Vanguard Computer Technology Labs, Inc.
  81 David Love Pl.  #100
- Goleta, CA 93117
+ Goleta, CA 93117-3266
 
 Physical Address
 ++++++++++++++++
